@@ -1,2 +1,2 @@
-# -nissan_leaf_ros
-Nissan Leaf ROS related packages
+# nissan_leaf_ros
+SZE Nissan Leaf ROS specific files (generated and so on)

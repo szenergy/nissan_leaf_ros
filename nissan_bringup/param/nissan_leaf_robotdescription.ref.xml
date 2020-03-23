@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<robot name="nissanleaf">
+  <!--GEN START: Kinematic links-->
+  <!--GEN LINK: base_link-->
+  <link name="base_link">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://nissan_bringup/meshes/Nissan_Leaf_RViz_with_texture_2020_02_07.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

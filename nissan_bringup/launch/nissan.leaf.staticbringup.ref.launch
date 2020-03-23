@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+	<include file="$(find nissan_bringup)/launch/nissanleaf_statictf_launch.launch"/>
+	<param name="robot_description" textfile="$(find nissan_bringup)/param/nissan_leaf_robotdescription.ref.xml"/>
+</launch>

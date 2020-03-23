@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+  <node name="nissan_leaf_can_gen_driver" type="nissan_leaf_gen_driver_node" pkg="nissan_leaf_gen_driver"/>
+</launch>

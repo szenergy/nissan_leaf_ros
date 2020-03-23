@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+  <group ns="velodyne_right">
+    <node args="manager" name="lidar_nodelet_manager" pkg="nodelet" type="nodelet"/>
+    <node args="load velodyne_driver/DriverNodelet lidar_nodelet_manager" name="velodyne_right_driver" pkg="nodelet" type="nodelet">
+      <param name="device_ip" value="192.168.1.203"/>
+      <param name="port" value="2373"/>
+      <param name="frame_id" value="velodyne_right"/>
+      <param name="manager" value="lidar_nodelet_manager"/>
+      <param name="model" value="VLP16"/>
+      <param name="pcap" value=""/>
+      <param name="rpm" value="600"/>
+      <param name="cut_angle" value="0.01"/>
+      <param name="read_fast" value="false"/>
+      <param name="read_once" value="false"/>
+      <param name="read_once" value="0.0"/>
+    </node>
+    <node args="load velodyne_pointcloud/CloudNodelet lidar_nodelet_manager" name="cloud_nodelet" pkg="nodelet" type="nodelet">
+      <param name="calibration" value="$(find velodyne_pointcloud)/params/VLP16db.yaml"/>
+      <param name="max_range" value="130.0"/>
+      <param name="min_range" value="0.4"/>
+      <param name="manager" value="lidar_nodelet_manager"/>
+    </node>
+  </group>
+  <group ns="velodyne_left">
+    <node args="manager" name="lidar_nodelet_manager" pkg="nodelet" type="nodelet"/>
+    <node args="load velodyne_driver/DriverNodelet lidar_nodelet_manager" name="velodyne_left_driver" pkg="nodelet" type="nodelet">
+      <param name="device_ip" value="192.168.1.202"/>
+      <param name="port" value="2372"/>
+      <param name="frame_id" value="velodyne_left"/>
+      <param name="manager" value="lidar_nodelet_manager"/>
+      <param name="model" value="VLP16"/>
+      <param name="pcap" value=""/>
+      <param name="rpm" value="600"/>
+      <param name="cut_angle" value="0.01"/>
+      <param name="read_fast" value="false"/>
+      <param name="read_once" value="false"/>
+      <param name="read_once" value="0.0"/>
+    </node>
+    <node args="load velodyne_pointcloud/CloudNodelet lidar_nodelet_manager" name="cloud_nodelet" pkg="nodelet" type="nodelet">
+      <param name="calibration" value="$(find velodyne_pointcloud)/params/VLP16db.yaml"/>
+      <param name="max_range" value="130.0"/>
+      <param name="min_range" value="0.4"/>
+      <param name="manager" value="lidar_nodelet_manager"/>
+    </node>
+  </group>
+</launch>
+

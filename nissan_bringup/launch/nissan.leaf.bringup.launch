@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+  <include file="$(find nissan_bringup)/launch/sensory/lidar.launch">
+
+  </include>
+  <include file="$(find nissan_bringup)/launch/sensory/sick_lms_111.nissan.launch">
+
+  </include>
+  <include file="$(find nissan_bringup)/launch/sensory/nissanleaf_statictf_launch.launch">
+
+  </include>
+  <include file="$(find nissan_bringup)/launch/low_level/can_driver.gen.launch">
+
+  </include>
+</launch>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+  <node args="1.8 -0.605 1.13 0.0 0.0 0.0 /base_link /velodyne_right 100" name="velodyne_right_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="0.0 0.0 0.2 0.0 0.0 0.0 /base_link /duro_imu 100" name="duro_imu_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="1.4 0.0 0.4 0.0 0.0 0.0 /base_link /stereo_camera 100" name="stereo_camera_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="3.713 -0.351 -0.111 0.0 0.0 0.0 /base_link /laser 100" name="laser_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="1.8 0.605 1.13 0.0 0.0 0.0 /base_link /velodyne_left 100" name="velodyne_left_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="0.0 0.0 0.2 0.0 0.0 0.0 /base_link /duro 100" name="duro_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+</launch>
+

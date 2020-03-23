@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+  <node pkg="gps_kvh" type="gps_kvh_node" name="gps_kvh_node_1" args="_baud:=115200 _port:=/dev/ttyUSB0">
+
+  </node>
+</launch>
