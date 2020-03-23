@@ -1,0 +1,29 @@
+repositories:
+  szenergy-utility-program:
+    type: git
+    url: https://github.com/szenergy/szenergy-utility-programs
+    version: master
+  nissan-leaf-ros:
+    type: git
+    url: https://github.com/szenergy/nissan_leaf_ros.git
+    version: master
+  novatel-gps:
+    type: git
+    url: https://github.com/szenergy/novatel_gps_driver
+    version: master
+  szenergy-drivers:
+    type: git
+    url: https://github.com/horverno/szenergy-drivers
+    version: master
+  ouster-example:
+    type: git
+    url: https://github.com/szenergy/ouster_example
+    version: master
+  szenergy-common:
+    type: git
+    url: https://github.com/horverno/szenergy-common
+    version: master
+  szenergy-gazebo:
+    type: git
+    url: https://github.com/horverno/szenergy-gazebo
+    version: master
