@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+  <node args="0.0 0.0 0.0 0.0 0.0 0.0 /left_os1/os1_sensor /left_os1/os1_lidar 10" name="os1sensorlidarleft" pkg="tf" type="static_transform_publisher"/>
+  <node args="0.0 0.0 0.0 0.0 0.0 0.0 /left_os1/os1_sensor /left_os1/os1_imu 10" name="os1sensorimuleft" pkg="tf" type="static_transform_publisher"/>
+  <node args="0.0 0.0 0.0 0.0 0.0 0.0 /right_os1/os1_sensor /right_os1/os1_lidar 10" name="os1sensorlidarright" pkg="tf" type="static_transform_publisher"/>
+  <node args="0.0 0.0 0.0 0.0 0.0 0.0 /right_os1/os1_sensor /right_os1/os1_imu 10" name="os1sensorimuright" pkg="tf" type="static_transform_publisher"/>
+</launch>
