@@ -1,0 +1,5 @@
+<!--roslaunch novatel_gps_driver novatel_eth.launch-->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+  <include file="$(find novatel_gps_driver)/launch/novatel_eth.launch" />
+</launch>
