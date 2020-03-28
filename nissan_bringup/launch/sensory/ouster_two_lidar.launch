@@ -1,5 +1,5 @@
-<!-- roslaunch ouster_ros two_lidar.launch -->
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launch>
-  <include file="$(find ouster_ros)/launch/two_lidar.launch" />
+  <!-- roslaunch ouster_ros two_lidar.launch -->
+  <include file="$(find ouster_ros)/two_lidar.launch" />
 </launch>
