@@ -4,8 +4,8 @@
     - LIDAR: 2 x Ouster OS1-64
     - LIDAR: 2 x Velodyne VLP-16
     - LIDAR: 1 x Sick
-    - GPS:   1 x Duro (map->base_link duro_global_frame_tf_publisher.launch)
-    - GPS:   1 x NovAtel
+    - GPS:   1 x Duro 
+    - GPS:   1 x NovAtel (map->base_link nova_global_frame_tf_publisher.launch)
     - CAN:   can_driver.gen.launch
     - TF:    nissanleaf_statictf_launch.launch
 -->
@@ -14,7 +14,7 @@
   <include file="$(find nissan_bringup)/launch/sensory/VLP16_points_multi.launch" />
   <include file="$(find nissan_bringup)/launch/sensory/sick_lms_111.nissan.launch" />
   <include file="$(find nissan_bringup)/launch/sensory/gps.duro.launch" />
-  <!-- <include file="$(find nissan_bringup)/launch/sensory/gps.nova.launch" /> -->
+  <include file="$(find nissan_bringup)/launch/sensory/gps.nova.launch" />
   <include file="$(find nissan_bringup)/launch/tf_setup/duro_global_frame_tf_publisher.launch" />
   <include file="$(find nissan_bringup)/launch/low_level/can_driver.gen.launch" />
   <include file="$(find nissan_bringup)/launch/nissanleaf_statictf_launch.launch" />
