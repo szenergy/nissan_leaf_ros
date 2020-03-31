@@ -13,8 +13,8 @@
   <include file="$(find nissan_bringup)/launch/sensory/ouster_two_lidar.launch" />
   <include file="$(find nissan_bringup)/launch/sensory/VLP16_points_multi.launch" />
   <include file="$(find nissan_bringup)/launch/sensory/sick_lms_111.nissan.launch" />
-  <include file="$(find nissan_bringup)/launch/sensory/gps.duro.launch" />
-  <include file="$(find nissan_bringup)/launch/sensory/gps.nova.launch" />
+  <include file="$(find nissan_bringup)/launch/sensory/gps/gps.duro.launch" />
+  <include file="$(find nissan_bringup)/launch/sensory/gps/gps.nova.launch" />
   <include file="$(find nissan_bringup)/launch/tf_setup/duro_global_frame_tf_publisher.launch" />
   <include file="$(find nissan_bringup)/launch/low_level/can_driver.gen.launch" />
   <include file="$(find nissan_bringup)/launch/nissanleaf_statictf_launch.launch" />
