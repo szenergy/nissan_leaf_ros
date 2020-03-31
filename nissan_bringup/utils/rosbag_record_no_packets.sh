@@ -1,0 +1,1 @@
+rosbag record -a -O no_packets01.bag -x "(.*)_packets|(.*)/velodyne_packets"
