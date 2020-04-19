@@ -6,7 +6,7 @@
   <include file="$(find nissan_bringup)/launch/sensory/sick_lms_111.nissan.launch">
 
   </include>
-  <include file="$(find nissan_bringup)/launch/sensory/nissanleaf_statictf_launch.launch">
+  <include file="$(find nissan_bringup)/launch/tf_setup/nissanleaf_statictf_launch.launch">
 
   </include>
   <include file="$(find nissan_bringup)/launch/low_level/can_driver.gen.launch">

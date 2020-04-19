@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+  <node args="0.0 0.0 0.2 0.0 0.0 0.0 /base_link /duro_gps 10" name="duro_gps_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="1.749 0.703 1.166 0.0 0.0 -1.0471975511965976 /base_link /velodyne_left 10" name="velodyne_left_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="1.874 0.0 1.286 0.0 0.0 0.0 /base_link /zed_camera_front 10" name="zed_camera_front_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="1.749 -0.703 1.166 0.0 0.0 1.0471975511965976 /base_link /velodyne_right 10" name="velodyne_right_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="3.707 -0.351 0.113 0.0 0.0 0.0 /base_link /laser 10" name="sick_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="1.769 -0.58 1.278 0 0.0 0.0 /base_link right_os1/os1_sensor 10" name="ouster_right_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="0.0 0.0 0.2 0.0 0.0 0.0 /base_link /duro_gps_imu 10" name="duro_gps_imu_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="1.769 0.58 1.278 0 0.0 0.0 /base_link left_os1/os1_sensor 10" name="ouster_left_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <!-- Note the order ypr instead of the often used rpy -->
+</launch>
+

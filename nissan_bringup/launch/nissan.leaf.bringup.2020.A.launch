@@ -19,6 +19,6 @@
   <include file="$(find nissan_bringup)/launch/tf_setup/duro_global_frame_tf_publisher.launch" />
   <include file="$(find zed_wrapper)/launch/zed_no_tf.launch" />
   <include file="$(find nissan_bringup)/launch/low_level/can_driver.gen.launch" />
-  <include file="$(find nissan_bringup)/launch/nissanleaf_statictf_launch.launch" />
+  <include file="$(find nissan_bringup)/launch/tf_setup/nissanleaf_statictf_launch.launch" />
   <include file="$(find nissan_bringup)/launch/test/test.ouster.lidar.launch" />
 </launch>
