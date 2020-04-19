@@ -1,0 +1,19 @@
+<launch>
+    <arg name="hlc_ip" default="192.168.1.54"/>
+    <!-- Right lidar -->
+    <include file="$(find ouster_ros)/os1.launch">
+        <arg name="group_prefix" value="right_os1"/>
+        <arg name="os1_ip" value="192.168.1.205"/>
+        <arg name="os1_dest" value="$(arg hlc_ip)"/>
+        <arg name="os1_lidar_port" default="7504" doc="port to which the sensor should send lidar data"/>
+        <arg name="os1_imu_port" default="7505" doc="port to which the sensor should send imu data"/>
+    </include>
+    <!-- Left lidar -->
+    <include file="$(find ouster_ros)/os1.launch">
+        <arg name="group_prefix" value="left_os1"/>
+        <arg name="os1_ip" value="192.168.1.204"/>
+        <arg name="os1_dest" value="$(arg hlc_ip)"/>
+        <arg name="os1_lidar_port" default="7502" doc="port to which the sensor should send lidar data"/>
+        <arg name="os1_imu_port" default="7503" doc="port to which the sensor should send imu data"/>
+    </include>    
+</launch>
