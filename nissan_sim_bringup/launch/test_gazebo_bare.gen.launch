@@ -1,0 +1,20 @@
+<launch>
+    <param name="use_sim_time" value="true" />
+    <include file="$(find szelectricity_description)/launch/nissan_leaf/nissan.leaf.3d.gen.launch" />
+    <include file="$(find szelectricity_gazebo_plugins)/launch/gpsfix2pos.abs.launch" />
+    <include file="$(find szenergy_autoware)/launch/localization/ekf.gps.launch" />
+    <node pkg="tf" type="static_transform_publisher" name="ekf_base_tf" args="0 0 0 0 0 0 /ekf_pose /base_link 100"/>
+    <node pkg="topic_tools" type="relay" name="current_psoe_relay" args="ekf_pose current_pose"/>
+    <arg name="load_csv" default="true" />
+    <arg name="multi_lane_csv" default="$(find szelectricity_description)/test_waypoints/zala_zone_waypoint_mpc_4_varvel.csv" />
+
+    <!-- rosrun waypoint_maker waypoint_loader _multi_lane_csv:="path file" -->
+    <node pkg="waypoint_maker" type="waypoint_loader" name="waypoint_loader" output="screen" if="$(arg load_csv)">
+      <param name="multi_lane_csv" value="$(arg multi_lane_csv)" />
+    </node>
+    <node pkg="waypoint_maker" type="waypoint_replanner" name="waypoint_replanner" output="screen"/>
+    <node pkg="waypoint_maker" type="waypoint_marker_publisher" name="waypoint_marker_publisher" />
+    <include file="$(find lane_planner)/launch/lane_select.launch" />
+    <node pkg="lane_planner" type="lane_rule" name="lane_rule" />
+    <node pkg="lane_planner" type="lane_stop" name="lane_stop" />
+</launch>
