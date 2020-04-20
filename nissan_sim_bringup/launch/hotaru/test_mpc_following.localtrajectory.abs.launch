@@ -1,7 +1,7 @@
 <launch>
     <param name="use_sim_time" value="true" />
     <include file="$(find szelectricity_gazebo_plugins)/launch/gpsfix2pos.abs.launch" />
-    <include file="$(find nissan_bringup)/launch/tf_setup/nissan.leaf.staticbringup.ref.sim.launch" />
+    <include file="$(find nissan_sim_bringup)/launch/tf_setup/nissan.leaf.staticbringup.ref.sim.launch" />
 
     <node pkg="gps_tf_publisher" type="gps_tf_publisher" name="gps_tf_publisher">
         <remap from="gnss_pose" to="current_pose"/>
