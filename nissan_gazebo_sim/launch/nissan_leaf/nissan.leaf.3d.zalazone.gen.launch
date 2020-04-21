@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+  <param name="robot_description" textfile="$(find szelectricity_description)/urdf/nissan_leaf.3d.gen.urdf"/>
+  <!--Load URDF-->
+  <node args="-param robot_description -urdf -model nissanleaf -x 0 -y 0 -z 1.2 -Y 0" name="spawn_nissanleaf" pkg="gazebo_ros" type="spawn_model"/>
+</launch>

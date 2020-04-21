@@ -1,0 +1,6 @@
+<launch>
+    <node name="gpsfix2pos" pkg="nissan_gazebo_sim" type="gpsfix2pos.py">
+        <param name="rel_pos" value="False"/>
+        <param name="gnss_pose_topicname" value="/gnss_pose"/>
+    </node>
+</launch>

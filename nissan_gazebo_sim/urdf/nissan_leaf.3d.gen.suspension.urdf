@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<robot name="nissanleaf">
+  <!--GEN START: Kinematic links-->
+  <!--GEN LINK: base_link-->
+  <link name="base_link">
+    <visual>
+      <origin rpy="1.5707963146269321 0.0 1.5707963146269321" xyz="1.350000023841858 0.0 0.0"/>
+      <geometry>
+        <cylinder length="2.7" radius="0.05"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://nissan_gazebo_sim/meshes/Nissan_Leaf_Simulation_02_06.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963146269321 0.0 1.5707963146269321" xyz="1.350000023841858 0.0 0.0"/>
+      <geometry>
+        <cylinder length="2.7" radius="0.05"/>
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="package://nissan_gazebo_sim/meshes/nissan_leaf_convex_hull.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="1.215 0.0 0.75"/>
+      <inertia izz="581.5625" ixy="0.0" ixz="0.0" iyy="1192.5" iyz="0.0" ixx="1211.5625"/>
+      <mass value="1500.0"/>
+    </inertial>
+  </link>
+  <!--GEN LINK: rear_axle_link-->
+  <link name="rear_axle_link">
+    <visual>
+      <origin rpy="1.5707963146269321 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="1.55" radius="0.05"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="10.0"/>
+      <inertia ixx="2.0083333333333333" ixy="0.0" ixz="0.0" iyy="2.0083333333333333" iyz="0.0" izz="0.012500000000000002"/>
+    </inertial>
+    <collision>
+      <origin rpy="1.5707963146269321 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="1.55" radius="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: front_axle_link-->
+  <link name="front_axle_link">
+    <visual>
+      <origin rpy="1.5707963146269321 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="1.545" radius="0.05"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="10.0"/>
+      <inertia ixx="1.9954375" ixy="0.0" ixz="0.0" iyy="1.9954375" iyz="0.0" izz="0.012500000000000002"/>
+    </inertial>
+    <collision>
+      <origin rpy="1.5707963146269321 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="1.545" radius="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: front_left_wheel_link-->
+  <link name="front_left_wheel_link">
+    <visual>
+      <origin rpy="1.5707963146269321 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.1"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="0.005416666666666668" ixy="0.0" ixz="0.0" iyy="0.005416666666666668" iyz="0.0" izz="0.010000000000000002"/>
+    </inertial>
+    <collision>
+      <origin rpy="1.5707963146269321 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.1"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: front_right_wheel_link-->
+  <link name="front_right_wheel_link">
+    <visual>
+      <origin rpy="1.5707963146269321 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.1"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="0.005416666666666668" ixy="0.0" ixz="0.0" iyy="0.005416666666666668" iyz="0.0" izz="0.010000000000000002"/>
+    </inertial>
+    <collision>
+      <origin rpy="1.5707963146269321 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.1"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: rear_left_wheel_link-->
+  <link name="rear_left_wheel_link">
+    <visual>
+      <origin rpy="1.5707963146269321 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="0.002916666666666667" ixy="0.0" ixz="0.0" iyy="0.002916666666666667" iyz="0.0" izz="0.0025000000000000005"/>
+    </inertial>
+    <collision>
+      <origin rpy="1.5707963146269321 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: rear_right_wheel_link-->
+  <link name="rear_right_wheel_link">
+    <visual>
+      <origin rpy="1.5707963146269321 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="0.002916666666666667" ixy="0.0" ixz="0.0" iyy="0.002916666666666667" iyz="0.0" izz="0.0025000000000000005"/>
+    </inertial>
+    <collision>
+      <origin rpy="1.5707963146269321 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: front_steer_left_wheel_link-->
+  <link name="front_steer_left_wheel_link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="0.002916666666666667" ixy="0.0" ixz="0.0" iyy="0.002916666666666667" iyz="0.0" izz="0.0025000000000000005"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: front_steer_right_wheel_link-->
+  <link name="front_steer_right_wheel_link">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="0.002916666666666667" ixy="0.0" ixz="0.0" iyy="0.002916666666666667" iyz="0.0" izz="0.0025000000000000005"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.1" radius="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: front_left_wheel_link_drive-->
+  <link name="front_left_wheel_link_drive">
+    <visual>
+      <origin rpy="0.0 0.0 -0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://nissan_gazebo_sim/meshes/Nissan_Leaf_Wheel_Assembly_Right.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <!-- 
+        <mesh filename="package://nissan_gazebo_sim/meshes/nissan__leaf_wheel_collision_qhull.obj" scale="1.0 1.0 1.0"/>
+         -->
+        <cylinder radius="0.3125" length="0.2"/>
+      </geometry>
+      <origin rpy="1.575 0.0 -0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <inertia izz="0.419915" ixy="0.0" ixz="0.0" ixx="0.419915" iyz="0.0" iyy="0.7347675"/>
+      <mass value="15.0"/>
+    </inertial>
+  </link>
+  <!--GEN LINK: front_right_wheel_link_drive-->
+  <link name="front_right_wheel_link_drive">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://nissan_gazebo_sim/meshes/Nissan_Leaf_Wheel_Assembly_Right.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <!-- 
+        <mesh filename="package://nissan_gazebo_sim/meshes/nissan__leaf_wheel_collision_qhull.obj" scale="1.0 1.0 1.0"/>
+         -->
+        <cylinder radius="0.3125" length="0.2"/>        
+      </geometry>
+      <origin rpy="1.575 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <inertia izz="0.419915" ixy="0.0" ixz="0.0" ixx="0.419915" iyz="0.0" iyy="0.7347675"/>
+      <mass value="15.0"/>
+    </inertial>
+  </link>
+  <!--GEN LINK: rear_left_wheel_link_drive-->
+  <link name="rear_left_wheel_link_drive">
+    <visual>
+      <origin rpy="0.0 0.0 -0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://nissan_gazebo_sim/meshes/Nissan_Leaf_Wheel_Assembly_Right.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <!-- 
+        <mesh filename="package://nissan_gazebo_sim/meshes/nissan__leaf_wheel_collision_qhull.obj" scale="1.0 1.0 1.0"/>
+         -->
+        <cylinder radius="0.3125" length="0.2"/>
+      </geometry>
+      <origin rpy="1.575 0.0 -0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <inertia izz="0.419915" ixy="0.0" ixz="0.0" ixx="0.419915" iyz="0.0" iyy="0.7347675"/>
+      <mass value="15.0"/>
+    </inertial>
+  </link>
+  <!--GEN LINK: rear_right_wheel_link_drive-->
+  <link name="rear_right_wheel_link_drive">
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://nissan_gazebo_sim/meshes/Nissan_Leaf_Wheel_Assembly_Right.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <!--
+        <mesh filename="package://nissan_gazebo_sim/meshes/nissan__leaf_wheel_collision_qhull.obj" scale="1.0 1.0 1.0"/>
+         -->
+         <cylinder radius="0.3125" length="0.2"/>
+      </geometry>
+      <origin rpy="1.575 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <inertial>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <inertia izz="0.419915" ixy="0.0" ixz="0.0" ixx="0.419915" iyz="0.0" iyy="0.7347675"/>
+      <mass value="15.0"/>
+    </inertial>
+  </link>
+  <!--GEN LINK: duro-->
+  <link name="duro">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.007999999940395353" ixy="0.0" ixz="0.0" iyy="0.007999999940395353" iyz="0.0" izz="0.007999999940395353"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: laser-->
+  <link name="laser">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
+  <!--GEN LINK: ouster_left-->
+  <link name="ouster_left">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.007999999940395353" ixy="0.0" ixz="0.0" iyy="0.007999999940395353" iyz="0.0" izz="0.007999999940395353"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: velodyne_left-->
+  <link name="velodyne_left">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.007999999940395353" ixy="0.0" ixz="0.0" iyy="0.007999999940395353" iyz="0.0" izz="0.007999999940395353"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: ouster_right-->
+  <link name="ouster_right">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.007999999940395353" ixy="0.0" ixz="0.0" iyy="0.007999999940395353" iyz="0.0" izz="0.007999999940395353"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: duro_imu-->
+  <link name="duro_imu">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.003999999970197676" ixy="0.0" ixz="0.0" iyy="0.003999999970197676" iyz="0.0" izz="0.003999999970197676"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: stereo_camera-->
+  <link name="stereo_camera">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.007999999940395353" ixy="0.0" ixz="0.0" iyy="0.007999999940395353" iyz="0.0" izz="0.007999999940395353"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN LINK: velodyne_right-->
+  <link name="velodyne_right">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.007999999940395353" ixy="0.0" ixz="0.0" iyy="0.007999999940395353" iyz="0.0" izz="0.007999999940395353"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <!--GEN START: Kinematic joints-->
+  <joint name="axle_front" type="fixed">
+    <parent link="base_link"/>
+    <child link="front_axle_link"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <origin xyz="2.700000047683716 0.0 0.0"/>
+  </joint>
+  <joint name="axle_rear" type="fixed">
+    <parent link="base_link"/>
+    <child link="rear_axle_link"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <origin xyz="-0.0 0.0 0.0"/>
+  </joint>
+  <joint name="axle_front_left" type="fixed">
+    <parent link="front_axle_link"/>
+    <child link="front_steer_left_wheel_link"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <origin xyz="0.0 -0.7724999785423279 0.0"/>
+  </joint>
+  <joint name="axle_front_right" type="fixed">
+    <parent link="front_axle_link"/>
+    <child link="front_steer_right_wheel_link"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <origin xyz="0.0 0.7724999785423279 0.0"/>
+  </joint>
+  <joint name="axle_rear_left" type="fixed">
+    <parent link="rear_axle_link"/>
+    <child link="rear_left_wheel_link"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <origin xyz="0.0 -0.7749999761581421 0.0"/>
+  </joint>
+  <joint name="axle_rear_right" type="fixed">
+    <parent link="rear_axle_link"/>
+    <child link="rear_right_wheel_link"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <origin xyz="0.0 0.7749999761581421 0.0"/>
+  </joint>
+  <joint name="jnt_front_left_steer" type="revolute">
+    <parent link="suspension_end_link_front_left"/>
+    <child link="front_left_wheel_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="0.0 0.0 0.0"/>
+    <dynamics damping="50.0"/>
+    <limit effort="8000.0" lower="-0.4886921905584123" upper="0.5585053606381855" velocity="0.1"/>
+  </joint>
+  <joint name="jnt_front_right_steer" type="revolute">
+    <parent link="suspension_end_link_front_right"/>
+    <child link="front_right_wheel_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="0.0 0.0 0.0"/> 
+    <dynamics damping="50.0"/>   
+    <limit effort="8000.0" lower="-0.4886921905584123" upper="0.5585053606381855" velocity="0.1"/>
+  </joint>
+  <!-- BEGIN Suspension links -->
+  <!-- Front left -->
+  <link name="suspension_end_link_front_left">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.007999999940395353" ixy="0.0" ixz="0.0" iyy="0.007999999940395353" iyz="0.0" izz="0.007999999940395353"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_suspension_front_left" type="prismatic">
+    <parent link="front_steer_left_wheel_link"/>
+    <child link="suspension_end_link_front_left"/>
+    <origin xyz="0.0 0.0 -0.0"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <dynamics damping="2000.0"/>
+    <limit lower="-0.3" upper="0.0" effort="10000" velocity="500"/>
+  </joint>
+  <!-- Front right -->
+  <link name="suspension_end_link_front_right">
+    <visual>origin
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.007999999940395353" ixy="0.0" ixz="0.0" iyy="0.007999999940395353" iyz="0.0" izz="0.007999999940395353"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_suspension_front_right" type="prismatic">
+    <parent link="front_steer_right_wheel_link"/>
+    <child link="suspension_end_link_front_right"/>
+    <origin xyz="0.0 0.0 -0.0"/>
+    <dynamics damping="2000.0"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <limit lower="-0.3" upper="0.0" effort="10000" velocity="500"/>
+  </joint>
+  <!-- Rear right -->
+  <link name="suspension_end_link_rear_right">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.007999999940395353" ixy="0.0" ixz="0.0" iyy="0.007999999940395353" iyz="0.0" izz="0.007999999940395353"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_suspension_rear_right" type="prismatic">
+    <parent link="rear_right_wheel_link"/>
+    <child link="suspension_end_link_rear_right"/>
+    <origin xyz="0.0 0.0 -0.0"/>
+    <dynamics damping="2000.0"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <limit lower="-0.3" upper="0.0" effort="10000" velocity="500"/>
+  </joint>
+  <!-- Rear left -->
+  <link name="suspension_end_link_rear_left">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.007999999940395353" ixy="0.0" ixz="0.0" iyy="0.007999999940395353" iyz="0.0" izz="0.007999999940395353"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <sphere radius="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_suspension_rear_left" type="prismatic">
+    <parent link="rear_left_wheel_link"/>
+    <child link="suspension_end_link_rear_left"/>
+    <origin xyz="0.0 0.0 -0.0"/>
+    <axis xyz="0.0 0.0 -1.0"/>
+    <dynamics damping="2000.0"/>
+    <limit lower="-0.3" upper="0.0" effort="10000" velocity="500"/>
+  </joint>
+  <!-- END Suspension links -->
+  <joint name="joint_wheel_front_left" type="continuous">
+    <parent link="front_left_wheel_link"/>
+    <child link="front_left_wheel_link_drive"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+  <joint name="joint_wheel_front_right" type="continuous">
+    <parent link="front_right_wheel_link"/>
+    <child link="front_right_wheel_link_drive"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+  <joint name="joint_wheel_rear_left" type="continuous">
+  	<origin xyz="0.0 -0.0 0.0"/>	
+    <parent link="suspension_end_link_rear_left"/>
+    <child link="rear_left_wheel_link_drive"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+  <joint name="joint_wheel_rear_right" type="continuous">
+  	<origin xyz="0.0 0.0 0.0"/>
+    <parent link="suspension_end_link_rear_right"/>
+    <child link="rear_right_wheel_link_drive"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+  <joint name="jnt_duro" type="fixed">
+    <parent link="base_link"/>
+    <child link="duro"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="0.0 0.0 0.2"/>
+  </joint>
+  <joint name="jnt_laser" type="fixed">
+    <parent link="base_link"/>
+    <child link="laser"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="3.707 -0.351 0.108"/>
+  </joint>
+  <joint name="jnt_ouster_left" type="fixed">
+    <parent link="base_link"/>
+    <child link="ouster_left"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="1.769 0.58 1.278"/>
+  </joint>
+  <joint name="jnt_velodyne_left" type="fixed">
+    <parent link="base_link"/>
+    <child link="velodyne_left"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="1.749 0.703 1.166"/>
+  </joint>
+  <joint name="jnt_ouster_right" type="fixed">
+    <parent link="base_link"/>
+    <child link="ouster_right"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="1.769 -0.58 1.278"/>
+  </joint>
+  <joint name="jnt_duro_imu" type="fixed">
+    <parent link="base_link"/>
+    <child link="duro_imu"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="0.0 0.0 0.2"/>
+  </joint>
+  <joint name="jnt_stereo_camera" type="fixed">
+    <parent link="base_link"/>
+    <child link="stereo_camera"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="1.874 0.0 1.286"/>
+  </joint>
+  <joint name="jnt_velodyne_right" type="fixed">
+    <parent link="base_link"/>
+    <child link="velodyne_right"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <origin xyz="1.749 -0.703 1.166"/>
+  </joint>
+  <!--GEN START: Transmission definitions-->
+  <!--GEN START: Sensor definitions-->
+  <gazebo>
+    <plugin filename="libhector_gazebo_ros_gps.so" name="duro">
+      <updateRate>40</updateRate>
+      <bodyName>duro</bodyName>
+      <frameId>duro</frameId>
+      <topicName>/gps/fix</topicName>
+      <velocityTopicName>/gps/fix_velocity</velocityTopicName>
+      <referenceLatitude>46.8944633103</referenceLatitude>
+      <referenceLongitude>16.8349298959</referenceLongitude>
+      <referenceAltitude>245.946914672852</referenceAltitude>
+      <referenceHeading>90.0</referenceHeading>
+    </plugin>
+  </gazebo>
+  <gazebo reference="laser">
+    <sensor name="laser" type="ray">
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>300</samples>
+            <resolution>0</resolution>
+            <min_angle>-2.3561945</min_angle>
+            <max_angle>2.3561945</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.1</min>
+          <max>30.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <plugin filename="libgazebo_ros_laser.so" name="laser_laser">
+        <topicName>/laser/scan</topicName>
+        <frameName>laser</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <gazebo reference="ouster_left">
+    <sensor name="ouster_left" type="gpu_ray">
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>512</samples>
+            <resolution>1.0</resolution>
+            <min_angle>-3.141592653589793</min_angle>
+            <max_angle>3.141592653589793</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>64</samples>
+            <resolution>1.0</resolution>
+            <min_angle>-0.2617993877991494</min_angle>
+            <max_angle>0.2617993877991494</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.4</min>
+          <max>130.0</max>
+          <resolution>0.03</resolution>
+        </range>
+      </ray>
+      <plugin filename="libgazebo_ros_velodyne_gpu_laser.so" name="velodyne_ouster_left">
+        <topicName>/velodyne_points_ouster_left</topicName>
+        <frameName>ouster_left</frameName>
+        <min_range>0.4</min_range>
+        <max_range>132.0</max_range>
+        <gaussianNoise>0.008</gaussianNoise>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <!--
+  <gazebo reference="velodyne_left">
+    <sensor name="velodyne_left" type="gpu_ray">
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>2187</samples>
+            <resolution>1.0</resolution>
+            <min_angle>-3.141592653589793</min_angle>
+            <max_angle>3.141592653589793</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>16</samples>
+            <resolution>1.0</resolution>
+            <min_angle>-0.2617993877991494</min_angle>
+            <max_angle>0.2617993877991494</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.4</min>
+          <max>130.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <plugin filename="libgazebo_ros_velodyne_gpu_laser.so" name="velodyne_velodyne_left">
+        <topicName>/velodyne_points_velodyne_left</topicName>
+        <frameName>velodyne_left</frameName>
+        <min_range>0.4</min_range>
+        <max_range>130.0</max_range>
+        <gaussianNoise>0.008</gaussianNoise>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <gazebo reference="ouster_right">
+    <sensor name="ouster_right" type="gpu_ray">
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>2187</samples>
+            <resolution>1.0</resolution>
+            <min_angle>-3.141592653589793</min_angle>
+            <max_angle>3.141592653589793</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>16</samples>
+            <resolution>1.0</resolution>
+            <min_angle>-0.2617993877991494</min_angle>
+            <max_angle>0.2617993877991494</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.4</min>
+          <max>130.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <plugin filename="libgazebo_ros_velodyne_gpu_laser.so" name="velodyne_ouster_right">
+        <topicName>/velodyne_points_ouster_right</topicName>
+        <frameName>ouster_right</frameName>
+        <min_range>0.4</min_range>
+        <max_range>130.0</max_range>
+        <gaussianNoise>0.008</gaussianNoise>
+      </plugin>
+    </sensor>
+  </gazebo>
+  -->
+  <gazebo reference="duro_imu">
+    <sensor name="duro_imu" type="imu">
+      <update_rate>100</update_rate>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_duro_imu_plugin">
+        <topicName>/imu</topicName>
+        <bodyName>duro_imu</bodyName>
+        <updateRateHZ>100</updateRateHZ>
+        <frameName>duro_imu</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <gazebo reference="stereo_camera">
+    <sensor name="stereo_camera" type="multicamera">
+      <update_rate>32</update_rate>
+      <camera name="stereo_camera_right">
+        <pose>-0.07 0 0 0 0 0</pose>
+        <horizontal_fov>1.413716694115407</horizontal_fov>
+        <image>
+          <width>1920</width>
+          <height>1080</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>300.0</far>
+        </clip>
+      </camera>
+      <camera name="stereo_camera_left">
+        <pose>0.07 0 0 0 0 0</pose>
+        <horizontal_fov>1.413716694115407</horizontal_fov>
+        <image>
+          <width>1920</width>
+          <height>1080</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>300.0</far>
+        </clip>
+      </camera>
+      <plugin filename="libgazebo_ros_multicamera.so" name="camera_stereo_camera_plugin">
+        <cameraName>stereo_camera</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <frameName>stereo_camera</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <gazebo reference="velodyne_right">
+    <sensor name="velodyne_right" type="gpu_ray">
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>2187</samples>
+            <resolution>1.0</resolution>
+            <min_angle>-3.141592653589793</min_angle>
+            <max_angle>3.141592653589793</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>16</samples>
+            <resolution>1.0</resolution>
+            <min_angle>-0.2617993877991494</min_angle>
+            <max_angle>0.2617993877991494</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.4</min>
+          <max>130.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <plugin filename="libgazebo_ros_velodyne_gpu_laser.so" name="velodyne_velodyne_right">
+        <topicName>/velodyne_points_velodyne_right</topicName>
+        <frameName>velodyne_right</frameName>
+        <min_range>0.4</min_range>
+        <max_range>130.0</max_range>
+        <gaussianNoise>0.008</gaussianNoise>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <!--GEN START: Control plugins-->
+  <gazebo>
+    <plugin filename="libgazebo_nissan_leaf.so" name="gazebo_nissan_leaf">
+        <start_steer_p_gain>2000.0</start_steer_p_gain>
+	    <start_steer_i_gain>1.0</start_steer_i_gain>
+	    <start_steer_d_gain>1.0</start_steer_d_gain>
+	    <start_velocity_p_gain>50.0</start_velocity_p_gain>
+	    <start_velocity_i_gain>0.01</start_velocity_i_gain>
+	    <start_velocity_d_gain>10.0</start_velocity_d_gain>
+	    <steer_control_tune>1</steer_control_tune>	    
+	    <velocity_control_tune>1</velocity_control_tune>
+    </plugin>
+  </gazebo>
+  <gazebo>
+    <plugin filename="libgazebo_nissan_leaf_suspension.so" name="gazebo_suspension_nissan_leaf">
+    </plugin>
+  </gazebo>
+  <gazebo reference="front_left_wheel_link_drive">
+    <mu1>0.7</mu1>
+    <mu2>0.7</mu2>
+    <minDepth>0.005</minDepth>
+    <kp>1.0E8</kp>
+  </gazebo>
+  <gazebo reference="front_right_wheel_link_drive">
+    <mu1>0.7</mu1>
+    <mu2>0.7</mu2>
+    <minDepth>0.005</minDepth>
+    <kp>1.0E8</kp>
+  </gazebo>
+  <gazebo reference="rear_left_wheel_link_drive">
+    <mu1>0.7</mu1>
+    <mu2>0.7</mu2>
+    <minDepth>0.005</minDepth>
+    <kp>1.0E8</kp>
+  </gazebo>
+  <gazebo reference="rear_right_wheel_link_drive">
+    <mu1>0.7</mu1>
+    <mu2>0.7</mu2>
+    <minDepth>0.005</minDepth>
+    <kp>1.0E8</kp>
+  </gazebo>
+  <gazebo reference="joint_suspension_front_left">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <springStiffness>45000</springStiffness>
+    <springReference>0.1</springReference>
+  </gazebo>
+  <gazebo reference="joint_suspension_front_right">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <springStiffness>45000</springStiffness>
+    <springReference>0.1</springReference>
+  </gazebo>
+  <gazebo reference="joint_suspension_rear_right">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <springStiffness>45000</springStiffness>
+    <springReference>0.1</springReference>	    
+  </gazebo>
+  <gazebo reference="joint_suspension_rear_left">    
+   	<implicitSpringDamper>1</implicitSpringDamper>
+   	<springStiffness>45000</springStiffness>
+   	<springReference>0.1</springReference>		    
+  </gazebo>
+  
+</robot>
