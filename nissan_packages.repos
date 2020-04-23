@@ -21,9 +21,5 @@ repositories:
     version: master
   szenergy-common:
     type: git
-    url: https://github.com/horverno/szenergy-common
-    version: master
-  szenergy-gazebo:
-    type: git
-    url: https://github.com/horverno/szenergy-gazebo
+    url: https://github.com/szenergy/szenergy-common
     version: master
