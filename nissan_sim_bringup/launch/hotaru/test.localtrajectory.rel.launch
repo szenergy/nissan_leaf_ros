@@ -1,6 +1,6 @@
 <launch>
     <param name="use_sim_time" value="true" />
-    <include file="$(find nissan_gazebo_sim)/launch/gpsfix2pos.abs.launch" />
+    <include file="$(find nissan_gazebo_sim)/launch/gpsfix2pos.rel.launch" />
     <include file="$(find nissan_sim_bringup)/launch/tf_setup/nissan.leaf.staticbringup.ref.sim.launch" />
 
     <node pkg="gps_tf_publisher" type="gps_tf_publisher" name="gps_tf_publisher">

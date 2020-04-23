@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+  <param name="robot_description" textfile="$(find nissan_gazebo_sim)/urdf/nissan_leaf.3d.gen.nolidar.urdf"/>
+  <!--Load URDF-->
+  <node args="-param robot_description -urdf -model nissanleaf -z 0.3" name="spawn_nissan_leaf" pkg="gazebo_ros" type="spawn_model"/>
+</launch>
