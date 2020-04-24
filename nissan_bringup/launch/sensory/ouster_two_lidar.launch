@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- An example how to use two Ouster together. -->
 <launch>
-  <!-- roslaunch ouster_ros two_lidar.launch -->
-  <include file="$(find ouster_ros)/two_lidar.launch" />
+  <!-- roslaunch nissan_bringup ouster_left.launch -->
+  <include file="$(find nissan_bringup)/launch/sensory/ouster_left.launch" />
+  <!-- roslaunch nissan_bringup ouster_right.launch -->
+  <include file="$(find nissan_bringup)/launch/sensory/ouster_right.launch" />
 </launch>

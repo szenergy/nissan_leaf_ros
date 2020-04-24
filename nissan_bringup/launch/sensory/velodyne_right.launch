@@ -4,7 +4,7 @@
     <node args="manager" name="lidar_nodelet_manager" pkg="nodelet" type="nodelet"/>
     <node args="load velodyne_driver/DriverNodelet lidar_nodelet_manager" name="velodyne_right_driver" pkg="nodelet" type="nodelet">
       <param name="device_ip" value="192.168.1.203"/>
-      <param name="port" value="2373"/>
+      <param name="port" value="1273"/>
       <param name="frame_id" value="velodyne_right"/>
       <param name="manager" value="lidar_nodelet_manager"/>
       <param name="model" value="VLP16"/>
