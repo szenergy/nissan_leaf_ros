@@ -16,9 +16,8 @@
   <include file="$(find nissan_bringup)/launch/sensory/sick_lms_111.nissan.launch" />
   <include file="$(find nissan_bringup)/launch/sensory/gps.duro.launch" />
   <include file="$(find nissan_bringup)/launch/sensory/gps.nova.launch" />
-  <include file="$(find nissan_bringup)/launch/tf_setup/duro_global_frame_tf_publisher.launch" />
+  <include file="$(find nissan_bringup)/launch/tf_setup/tf_duro_global_frame_tf_publisher.launch" />
   <include file="$(find zed_wrapper)/launch/zed_no_tf.launch" />
   <include file="$(find nissan_bringup)/launch/low_level/can_driver.gen.launch" />
-  <include file="$(find nissan_bringup)/launch/tf_setup/nissanleaf_statictf_launch.launch" />
-  <include file="$(find nissan_bringup)/launch/test/test.ouster.lidar.launch" />
+  <include file="$(find nissan_bringup)/launch/tf_setup/tf_nissanleaf_statictf.launch" />
 </launch>
