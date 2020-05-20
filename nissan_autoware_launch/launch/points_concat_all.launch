@@ -1,0 +1,13 @@
+<!-- -->
+<launch>
+  <arg name="input_topics" default="[/left_os1/os1_cloud_node/points, /right_os1/os1_cloud_node/points]" />
+  <arg name="output_topic" default="/points_concat" />
+  <arg name="output_frame_id" default="base_link" />
+
+  <node pkg="points_preprocessor" type="points_concat_filter"
+        name="points_concat_filter" output="screen">
+    <param name="output_frame_id" value="$(arg output_frame_id)" />
+    <param name="input_topics" value="$(arg input_topics)" />
+    <remap from="/points_concat" to="$(arg output_topic)" />
+  </node>
+</launch>
