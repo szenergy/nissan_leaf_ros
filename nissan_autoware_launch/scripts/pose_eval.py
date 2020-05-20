@@ -15,6 +15,7 @@ import math
 class PoseMonitor(object):   
 
     def __init__(self):
+        self.ndt_pose = None
         self.err_ndt = Float64()
         self.err_kalman = Float64()
         self.pub_dist = rospy.Publisher("/distance_difference_ndt_gnss", Float64, queue_size=10)
@@ -23,6 +24,7 @@ class PoseMonitor(object):
         self.sub_gnss_pose = rospy.Subscriber("/gnss_pose", PoseStamped, self.cbGnssPose)
         self.sub_gnss_pose = rospy.Subscriber("/ekf_pose", PoseStamped, self.cbEkfPose)
         self.eval_timer = rospy.Timer(rospy.Duration(1.0/10.0), self.cbTimer, reset=True)        
+        
 
     def cbGnssPose(self, data):
         self.gnss_pose = data
@@ -33,8 +35,8 @@ class PoseMonitor(object):
     def cbEkfPose(self, data):
         self.ekf_pose = data
 
-    def cbTimer(self, event):
-        if (abs(self.gnss_pose.header.stamp.to_sec() - self.ndt_pose.header.stamp.to_sec()) < 0.2):            
+    def cbTimer(self, event):        
+        if (abs(self.gnss_pose.header.stamp.to_sec() - self.ndt_pose.header.stamp.to_sec()) < 0.2 and not self.ndt_pose is None): 
             dx_ndt = self.gnss_pose.pose.position.x - self.ndt_pose.pose.position.x
             dy_ndt = self.gnss_pose.pose.position.y - self.ndt_pose.pose.position.y
             # EKF
