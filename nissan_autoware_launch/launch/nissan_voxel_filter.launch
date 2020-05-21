@@ -10,6 +10,8 @@
     <remap from="/points_raw" to="/sync_drivers/points_raw" if="$(arg sync)" />
     <param name="output_log" value="$(arg output_log)" />
     <param name="measurement_range" value="$(arg measurement_range)" />
-    <param name="voxel_leaf_size" value="0.5" />
+    <param name="voxel_leaf_size" value="15.0" />
   </node>
 </launch>
+<!--rostopic pub /config/voxel_grid_filter autoware_config_msgs/ConfigVoxelGridFilter "voxel_leaf_size: 2.5
+measurement_range: 200.0" -->
