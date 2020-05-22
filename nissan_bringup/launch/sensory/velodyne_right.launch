@@ -9,7 +9,7 @@
       <param name="manager" value="lidar_nodelet_manager"/>
       <param name="model" value="VLP16"/>
       <param name="pcap" value=""/>
-      <param name="rpm" value="600"/>
+      <param name="rpm" value="1200"/>
       <param name="cut_angle" value="0.01"/>
       <param name="read_fast" value="false"/>
       <param name="read_once" value="false"/>
