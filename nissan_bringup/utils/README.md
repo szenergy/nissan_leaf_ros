@@ -1,18 +1,24 @@
-# Rosbag exclude
+# Utils
 
-Use `-x` when rosbag record Todo
+This directory contains various utils which comes handy when saving rosbag, mounting an HDD etc.
 
-Eg:
+## Rosbag exclude
+
+In a complex vehicular ROS system many topics are present, however not all of them are needed in the bag files. The solution for that can be the use of `-x` exclusion when rosbag record.
+
+E.g.:
 
 ```
 rosbag record -a -O myrosbag.bag -x "(.*)/velodyne_packets"
 ```
 
 ```
-rosbag record -a -O $FILE1 -x "(.*)_packets|(.*)/velodyne_packets|/zed_node/depth(.*)|/zed_node/left(.*)|/zed_node/left_raw(.*)|/zed_node/rgb/image_rect_gray(.*)|/zed_node/rgb_raw(.*)|/zed_node/right(.*)|/zed_node/stereo_raw(.*)/zed_node/rgb/image_rect_color(.*)|/zed_node/rgb/camera_info|/zed_node/parameter_descriptions|/zed_node/parameter_updates|/zed_node/pose_with_covariance|/zed_node/pose_with_covariance|/zed_node/path_odom|/zed_node/path_map|/zed_node/confidence/confidence_map|/zed_node/disparity/disparity_image|/zed_node/point_cloud/cloud_registered|/zed_node/pose"
+rosbag record -a -O $FILE1 -x "(.*)_packets|(.*)/velodyne_packets|/zed_node/depth(.*)|/zed_node/left/image_rect_color(.*)|/zed_node/left/image_rect_gray(.*)|/zed_node/left_raw(.*)|/zed_node/rgb/image_rect_gray(.*)|/zed_node/rgb_raw(.*)|/zed_node/right/image_rect_color(.*)|/zed_node/right/image_rect_gray(.*)|/zed_node/stereo_raw(.*)/zed_node/rgb/image_rect_color(.*)|/zed_node/rgb/camera_info|/zed_node/parameter_descriptions|/zed_node/parameter_updates|/zed_node/pose_with_covariance|/zed_node/pose_with_covariance|/zed_node/path_odom|/zed_node/path_map|/zed_node/confidence/confidence_map|/zed_node/disparity/disparity_image|/zed_node/point_cloud/cloud_registered|/zed_node/pose"
 ```
 
-# Saved zed topics
+## Saved zed topics
+
+When delaing with the zed stereo camera, there are [lot of zed topics](#all-zed-topics). For our purposes the following ones are required. (The [`rosbag_record_to_1tb_storage.sh`](rosbag_record_to_1tb_storage.sh) shell script saves only the required ones.)
 
 ```
 /zed_node/stereo/image_rect_color/compressed/parameter_updates
@@ -26,9 +32,11 @@ rosbag record -a -O $FILE1 -x "(.*)_packets|(.*)/velodyne_packets|/zed_node/dept
 /zed_node/stereo/image_rect_color/compressedDepth/parameter_updates
 /zed_node/stereo/image_rect_color/theora
 /zed_node/odom
+/zed_node/left/camera_info
+/zed_node/right/camera_info
 ```
 
-# All zed topics
+## All zed topics
 
 ```
 /zed_node/confidence/confidence_map
