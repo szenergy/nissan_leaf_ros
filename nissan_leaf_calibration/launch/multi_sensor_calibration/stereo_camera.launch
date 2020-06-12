@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="stereo_detector" type="stereo_detector_node" name="stereo_camera_detector" output="screen">
+      <remap from="/ueye/left/image_rect_color" to="/stereo_camera/left/image_rect_color"/>
+      <remap from="/ueye/right/image_rect_color" to="/stereo_camera/right/image_rect_color"/>
+      <remap from="/ueye/left/camera_info" to="/stereo_camera/left/camera_info"/>
+      <remap from="/ueye/right/camera_info" to="/stereo_camera/right/camera_info"/>
+      <remap from="/ueye/disparity" to="/stereo_camera/disparity"/>
+    </node>
+</launch>

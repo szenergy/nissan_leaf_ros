@@ -13,6 +13,7 @@
     <param name="voxel_leaf_size" value="15.0" />
   </node>
   <node pkg="rostopic" type="rostopic" name="config_voxelgrid" args="pub /config/voxel_grid_filter autoware_config_msgs/ConfigVoxelGridFilter --file=$(find nissan_autoware_launch)/param/voxel_settings.yaml"/>
+  <node args="697200 5285696.30588 0.0 0.0 0.0 0.0 /base_link /virtual_center_lidar 10" name="virtuallidar" pkg="tf" type="static_transform_publisher"/> 
 </launch>
 <!--rostopic pub /config/voxel_grid_filter autoware_config_msgs/ConfigVoxelGridFilter "voxel_leaf_size: 2.5
 measurement_range: 200.0" -->
