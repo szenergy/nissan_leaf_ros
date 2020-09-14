@@ -1,9 +1,9 @@
 <launch>
   <arg name="frame_id" default="map"/>
-  <node pkg="gps_tf_publisher" type="gps_tf_publisher" name="duro_leaf_tf_publisher">
+  <node pkg="leaf_tf_publisher" type="leaf_tf_publisher" name="duro_leaf_tf_publisher">
     <param name="parent_frame" value="$(arg frame_id)"/>
     <remap from="gnss_pose" to="gps_ref_pose"/>
-    <remap from="gps/current_pose" to="/gps/duro/current_pose"/>
+    <remap to="gps/current_pose" from="/gps/duro/current_pose"/>
   </node>
   <!--TODO: test and correct -->
 </launch>
