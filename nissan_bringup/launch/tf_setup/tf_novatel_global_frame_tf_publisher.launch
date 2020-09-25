@@ -2,7 +2,7 @@
   <arg name="frame_id" default="map"/>
   <node pkg="leaf_tf_publisher" type="leaf_tf_publisher" name="novatel_leaf_tf_publisher">
     <param name="parent_frame" value="$(arg frame_id)"/>
-    <remap from="gnss_pose" to="current_pose"/>
+    <!-- <remap from="gnss_pose" to="current_pose"/> -->
     <remap from="gps/current_pose" to="/gps/nova/current_pose"/>
   </node>
   <!--TODO: test and correct -->
