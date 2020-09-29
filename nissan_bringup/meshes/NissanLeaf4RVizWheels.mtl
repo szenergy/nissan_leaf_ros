@@ -1,5 +1,5 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
-# File Created: 29.09.2020 13:18:30
+# File Created: 29.09.2020 14:13:39
 
 newmtl 02___karosszeria
 	Ns 21.0000
@@ -12,6 +12,8 @@ newmtl 02___karosszeria
 	Kd 1.0000 1.0000 1.0000
 	Ks 0.8820 0.8820 0.8820
 	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\KrechtRudolf\Downloads\NissanLeaf\render.png
+	map_Kd C:\Users\KrechtRudolf\Downloads\NissanLeaf\render.png
 
 newmtl 03___muanyag
 	Ns 33.0000
