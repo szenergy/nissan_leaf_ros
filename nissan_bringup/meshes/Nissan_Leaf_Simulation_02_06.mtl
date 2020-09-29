@@ -1,5 +1,5 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
-# File Created: 29.09.2020 14:13:39
+# File Created: 29.09.2020 20:44:52
 
 newmtl 02___karosszeria
 	Ns 21.0000
@@ -12,8 +12,6 @@ newmtl 02___karosszeria
 	Kd 1.0000 1.0000 1.0000
 	Ks 0.8820 0.8820 0.8820
 	Ke 0.0000 0.0000 0.0000
-	map_Ka C:\Users\KrechtRudolf\Downloads\NissanLeaf\render.png
-	map_Kd C:\Users\KrechtRudolf\Downloads\NissanLeaf\render.png
 
 newmtl 03___muanyag
 	Ns 33.0000
@@ -146,8 +144,6 @@ newmtl Jaguar2015XETire
 	Kd 0.1973 0.1973 0.1973
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka C:\Users\KrechtRudolf\Documents\UnityEditor\simulator\Assets\External\Vehicles\Jaguar2015XE\Models\Materials\Jaguar2015XETireAlbedo.png
-	map_Kd C:\Users\KrechtRudolf\Documents\UnityEditor\simulator\Assets\External\Vehicles\Jaguar2015XE\Models\Materials\Jaguar2015XETireAlbedo.png
 
 newmtl Jaguar2015XEMetalRough
 	Ns 63.1804
