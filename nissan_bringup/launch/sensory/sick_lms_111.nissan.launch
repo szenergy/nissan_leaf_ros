@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- FOR FUTURE USE. NOT SUPPORTED NOW. DO NOT USE IT. -->
 <launch>
-  <arg name="hostname" default="192.168.1.105" />
+  <arg name="hostname" default="192.168.1.12" />
     <!-- robot_description and robot_state_publisher hier evtl. einbauen  -->
   <node name="sick_lms_1xx" pkg="sick_scan" type="sick_generic_caller" respawn="false" output="screen">
     <!-- default values: -->

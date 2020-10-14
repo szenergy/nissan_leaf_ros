@@ -3,6 +3,6 @@
     <!--<remap from="gnss_pose" to="current_pose"/> -->
     <remap from="gps/current_pose" to="/gps/duro/current_pose"/> 
   </node>
-  <node pkg="tf" type="static_transform_publisher" name="duro_static_tf_publisher" args="-0.196 0.0 1.1 0.0 0.0 0.0 gps base_link 10"/>
+  <node pkg="tf" type="static_transform_publisher" name="duro_static_tf_publisher" args="0.196 0.0 1.1 0.0 0.0 0.0 gps base_link 10"/>
 </launch>
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launch>
-  <node pkg="duro-ros" type="duronode" name="gps_duro_1" args="_address:=192.168.1.222 _port:=55555">
+  <node pkg="duro-ros" type="duronode" name="gps_duro_1" args="_address:=192.168.1.10 _port:=55555">
   </node>
 </launch>
