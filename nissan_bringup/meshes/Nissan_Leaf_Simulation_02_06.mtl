@@ -1,5 +1,5 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
-# File Created: 29.09.2020 14:13:39
+# File Created: 30.09.2020 08:26:58
 
 newmtl 02___karosszeria
 	Ns 21.0000
@@ -10,10 +10,8 @@ newmtl 02___karosszeria
 	illum 2
 	Ka 1.0000 1.0000 1.0000
 	Kd 1.0000 1.0000 1.0000
-	Ks 0.8820 0.8820 0.8820
-	Ke 0.0000 0.0000 0.0000
-	map_Ka C:\Users\KrechtRudolf\Downloads\NissanLeaf\render.png
-	map_Kd C:\Users\KrechtRudolf\Downloads\NissanLeaf\render.png
+	Ks 0.2820 0.2820 0.2820
+	Ke 0.5000 0.5000 0.5000
 
 newmtl 03___muanyag
 	Ns 33.0000
@@ -49,7 +47,7 @@ newmtl 14___elsolampa
 	Ka 0.8824 0.8863 0.9804
 	Kd 0.6902 0.7098 0.9529
 	Ks 0.8550 0.8550 0.8550
-	Ke 0.0000 0.0000 0.0000
+	Ke 0.5000 0.5000 0.5000
 
 newmtl 08___nissan_jel
 	Ns 10.0000
@@ -61,7 +59,7 @@ newmtl 08___nissan_jel
 	Ka 0.0706 0.1059 0.3843
 	Kd 0.0706 0.1059 0.3843
 	Ks 0.7740 0.7740 0.7740
-	Ke 0.0000 0.0000 0.0000
+	Ke 0.8000 0.8000 0.8000
 
 newmtl 13___Default
 	Ns 31.0000
@@ -72,8 +70,8 @@ newmtl 13___Default
 	illum 2
 	Ka 1.0000 0.0118 0.0118
 	Kd 1.0000 0.0118 0.0118
-	Ks 0.3960 0.3960 0.3960
-	Ke 0.0000 0.0000 0.0000
+	Ks 0.0160 0.0160 0.0160
+	Ke 0.2500 0.2500 0.2500
 
 newmtl 07___uveg
 	Ns 42.0000
@@ -85,7 +83,7 @@ newmtl 07___uveg
 	Ka 0.0667 0.0588 0.1333
 	Kd 0.0667 0.0588 0.1333
 	Ks 0.9270 0.9270 0.9270
-	Ke 0.0000 0.0000 0.0000
+	Ke 0.6000 0.6000 0.6000
 
 newmtl 09___alu
 	Ns 22.0000
@@ -97,7 +95,7 @@ newmtl 09___alu
 	Ka 0.6039 0.6039 0.6039
 	Kd 0.6039 0.6039 0.6039
 	Ks 0.3600 0.3600 0.3600
-	Ke 0.0000 0.0000 0.0000
+	Ke 0.5000 0.5000 0.5000
 
 newmtl 19___Default
 	Ns 17.0000
@@ -121,7 +119,7 @@ newmtl 15___gps_antenna
 	Ka 0.9686 0.9686 0.9686
 	Kd 0.9686 0.9686 0.9686
 	Ks 0.6210 0.6210 0.6210
-	Ke 0.0000 0.0000 0.0000
+	Ke 0.5000 0.5000 0.5000
 
 newmtl Jaguar2015XEMetalSmooth
 	Ns 43.2193
@@ -132,8 +130,8 @@ newmtl Jaguar2015XEMetalSmooth
 	illum 2
 	Ka 0.0000 0.0000 0.0000
 	Kd 0.6230 0.6230 0.6230
-	Ks 0.0000 0.0000 0.0000
-	Ke 0.0000 0.0000 0.0000
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.3000 0.3000 0.3000
 
 newmtl Jaguar2015XETire
 	Ns 10.0000
@@ -146,8 +144,6 @@ newmtl Jaguar2015XETire
 	Kd 0.1973 0.1973 0.1973
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka C:\Users\KrechtRudolf\Documents\UnityEditor\simulator\Assets\External\Vehicles\Jaguar2015XE\Models\Materials\Jaguar2015XETireAlbedo.png
-	map_Kd C:\Users\KrechtRudolf\Documents\UnityEditor\simulator\Assets\External\Vehicles\Jaguar2015XE\Models\Materials\Jaguar2015XETireAlbedo.png
 
 newmtl Jaguar2015XEMetalRough
 	Ns 63.1804
@@ -159,4 +155,4 @@ newmtl Jaguar2015XEMetalRough
 	Ka 0.0000 0.0000 0.0000
 	Kd 0.3608 0.3608 0.3608
 	Ks 0.7085 0.7085 0.7085
-	Ke 0.0000 0.0000 0.0000
+	Ke 0.3000 0.3000 0.3000

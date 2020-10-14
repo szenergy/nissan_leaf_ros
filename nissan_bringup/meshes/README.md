@@ -6,3 +6,5 @@ You should download the following files into this folder, from our internal stor
  - Nissan_LEAF_wo_wheels_yellow.mtl  
  - Nissan_LEAF_wo_wheels_yellow.obj  
  - render.png
+
+![img](Nissan_Leaf_Simulation_02_06.png)
