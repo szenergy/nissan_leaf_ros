@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launch>
-  <node pkg="duro-ros" type="duronode" name="gps_duro_1" args="_address:=192.168.1.10 _port:=55555">
-  </node>
+  <!-- instead of args use param | args="_address:=192.168.1.10 _port:=55555" -->
+  <param name="duro_address" value="192.168.1.10"/>
+  <param name="duro_port" value="55555"/>
+  <node pkg="duro-ros" type="duronode" name="gps_duro_1" />
 </launch>

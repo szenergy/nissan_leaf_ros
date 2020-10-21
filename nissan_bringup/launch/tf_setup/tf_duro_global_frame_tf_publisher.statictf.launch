@@ -1,5 +1,5 @@
 <launch>
-  <node pkg="leaf_tf_publisher" type="leaf_tf_publisher" name="duro_leaf_tf_publisher">
+  <node pkg="gps_tf_publisher" type="gps_tf_publisher" name="duro_leaf_tf_publisher">
     <!--<remap from="gnss_pose" to="current_pose"/> -->
     <remap from="gps/current_pose" to="/gps/duro/current_pose"/> 
   </node>

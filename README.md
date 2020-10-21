@@ -1,5 +1,10 @@
 # nissan_leaf_ros
-SZE Nissan Leaf ROS specific files (generated and so on)
+SZE Nissan Leaf ROS specific files. The most important package here is the `nissan_bringup`.
+
+![img](nissan_bringup/meshes/Nissan_Leaf_Simulation_02_06.png)
+
+## nissan_bringup
+This package is responsible for the basic functionality of the vehicle (drivers, simple demo requirements, etc).
 
 # Install other required packages
 Just create an src folder, and issue the following command:
@@ -17,9 +22,3 @@ If you would do all this with a command, issue the following command:
 ```bash
 sudo -H pip install -r requirements.txt
 ```
-
-# Autoware specific files
-The test cases rely on Autoware, you need to make Autoware paths available on your system.
-
-The following Autoware packages are required for full functionality:
-- __waypoint_maker (waypoint_marker_publisher)__: to publish Lanes as RViz paths.

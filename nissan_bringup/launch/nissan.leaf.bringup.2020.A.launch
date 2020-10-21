@@ -17,11 +17,11 @@
   <!--<include file="$(find nmea_navsat_driver)/launch/nmea_serial_driver.launch" />-->
   <include file="$(find nissan_bringup)/launch/sensory/gps.duro.launch" />
   <include file="$(find nissan_bringup)/launch/sensory/gps.nova.launch" />
-  <!--<include file="$(find zed_wrapper)/launch/zed_no_tf.launch" />-->
+  <include file="$(find zed_wrapper)/launch/zed_no_tf.launch" />
   <include file="$(find nissan_bringup)/launch/tf_setup/tf_novatel_global_frame_tf_publisher.statictf.launch" />  <!--Start Nova-->
+  <!--<include file="$(find nissan_bringup)/launch/tf_setup/tf_duro_global_frame_tf_publisher.statictf.launch" />-->   <!--Start Duro-->
   <include file="$(find nissan_bringup)/launch/tf_setup/tf_nissanleaf_statictf.launch" />
-   <!--<include file="$(find nissan_bringup)/launch/tf_setup/tf_duro_global_frame_tf_publisher.statictf.launch" />-->   <!--Start Duro-->
-  <include file="$(find leaf_can_driver)/launch/nissan_can_control.launch" />
+  <include file="$(find can_leaf_driver)/launch/nissan_can_control.launch" />
   <node pkg="nissan_bringup" type="vehicle_cmd_converter.py" name="vehicle_cmd_converter"/> <!-- temporary fix TODO-->
   <node pkg="nissan_bringup" type="current_pose_from_tf.py" name="current_pose_from_tf"/> <!-- temporary fix TODO-->
   <node pkg="topic_tools" type="relay" name="cmd_relay" args="/ctrl_raw /ctrl_cmd" />
