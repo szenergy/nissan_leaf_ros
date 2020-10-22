@@ -32,7 +32,7 @@ pub_cmd = None
 def ctrCallBack(msg):
     global pub_cmd
     cmd_msg = szelec_msg.VehicleVelocityControlCommand()
-    cmd_msg.ref_vehicle_speed = msg.cmd.linear_velocity * 3.6 # m/s to km/h
+    cmd_msg.ref_vehicle_speed = msg.cmd.linear_velocity # km/h
     cmd_msg.ref_steer_angle = -msg.cmd.steering_angle
     cmd_msg.set_autonomous_mode = True
     cmd_msg.header.stamp = rospy.Time.now()

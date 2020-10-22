@@ -47,7 +47,7 @@ class WaypointLoaderGlobalPlanner(object):
                 y = float(values[1])
                 z = float(values[2])
                 yaw = float(values[3])
-                lin_vel = float(values[4])/3.6
+                lin_vel = float(values[4])
                 wp = StructWaypoint(x, y, yaw, lin_vel)
                 waypoint_list.append(wp)
                 w0 = Waypoint()
@@ -150,7 +150,7 @@ def main():
         rospy.loginfo("All set, publishing lane information")
         file_ok = True
     except:
-        rospy.logerr(file + "does not exist")
+        rospy.logerr(file + "does not exist or waypoint_file_name param is missing")
         file_ok = False
     if file_ok:
         rospy.spin()
