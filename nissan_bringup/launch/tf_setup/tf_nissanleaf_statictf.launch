@@ -17,6 +17,9 @@
   <node args="0.0 0.0 0.0 0.0 0.0 0.0 /left_os1/os1_sensor /left_os1/os1_imu 10" name="os1sensorimuleft" pkg="tf" type="static_transform_publisher"/>
   <node args="0.0 0.0 0.0 0.0 0.0 0.0 /right_os1/os1_sensor /right_os1/os1_lidar 10" name="os1sensorlidarright" pkg="tf" type="static_transform_publisher"/>
   <node args="0.0 0.0 0.0 0.0 0.0 0.0 /right_os1/os1_sensor /right_os1/os1_imu 10" name="os1sensorimuright" pkg="tf" type="static_transform_publisher"/>
+  <arg name="model_path" default="$(find nissan_bringup)/param/nissan_leaf_robotdescription.ref.xml" />
+  <include file="$(find vehicle_description)/launch/vehicle_model.launch" />
+  <param name="robot_description" textfile="$(arg model_path)" />
   <!--<node args="8.0 0.0 0.0 0.0 0.0 3.1415926535 /base_link /image 10" name="rviz_img_tf_publisher" pkg="tf" type="static_transform_publisher"/> -->
 </launch>
 
