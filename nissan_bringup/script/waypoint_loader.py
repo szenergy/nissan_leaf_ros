@@ -37,6 +37,29 @@ class WaypointLoaderGlobalPlanner(object):
             #self.lane_marker.scale.z = 0.2
             self.lane_marker.type = Marker.LINE_STRIP
 
+    def mapval(self, x, in_min, in_max, out_min, out_max):
+        return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
+
+    def gradient(self, speed, max):
+        green = (92./255., 255./255., 236./255.)
+        red = (255./255., 92./255., 193./255.)
+        blue = (92./255., 187./255., 255./255.)
+        if speed < 0:
+            # reversed speed
+            return(green)
+        elif speed > max:
+            return(red)
+        elif 0 < speed < max / 2:
+            c0 = self.mapval(speed, 0, max / 2, green[0], blue[0])
+            c1 = self.mapval(speed, 0, max / 2, green[1], blue[1])
+            c2 = self.mapval(speed, 0, max / 2, green[2], blue[2])
+            return(c0, c1, c2)
+        else:
+            c0 = self.mapval(speed, max / 2, max, blue[0], red[0])
+            c1 = self.mapval(speed, max / 2, max, blue[1], red[1])
+            c2 = self.mapval(speed, max / 2, max, blue[2], red[2])
+            return(c0, c1, c2)
+
     def load_csv(self, path):
         waypoint_list = []
         with open(path) as f:
@@ -106,9 +129,10 @@ class WaypointLoaderGlobalPlanner(object):
                 marker_lane_points.header.frame_id = "map"
                 marker_lane_points.ns = "lane_points"
                 marker_lane_points.type = Marker.SPHERE
-                marker_lane_points.color.r = 0.0
-                marker_lane_points.color.g = 0.7
-                marker_lane_points.color.b = 1.0
+                sphere_color = self.gradient(lin_vel, 10) # max speed color (red) is 10
+                marker_lane_points.color.r = sphere_color[0]
+                marker_lane_points.color.g = sphere_color[1]
+                marker_lane_points.color.b = sphere_color[2]
                 marker_lane_points.color.a = 1.0
                 marker_lane_points.scale.x = 0.2
                 marker_lane_points.scale.y = 0.2
@@ -150,7 +174,7 @@ def main():
         rospy.loginfo("All set, publishing lane information")
         file_ok = True
     except:
-        rospy.logerr(file + "does not exist or waypoint_file_name param is missing")
+        rospy.logerr(file + " does not exist or waypoint_file_name param is missing")
         file_ok = False
     if file_ok:
         rospy.spin()
