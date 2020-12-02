@@ -1,3 +1,4 @@
+//This node publishes a /current_pose topic based on /tf map->base_link transform
 #include <ros/ros.h>
 #include <tf2_ros/buffer.h>
 #include <tf2_ros/transform_listener.h>
@@ -18,17 +19,20 @@ int main(int argc,char **argv){
         
         geometry_msgs::TransformStamped trans;
         try{
-            trans = tfBuffer.lookupTransform("map","base_link",ros::Time());
+            trans = tfBuffer.lookupTransform("map","base_link",ros::Time(0));
         }catch(tf2::LookupException& ex){
             ROS_WARN("%s",ex.what());
+            ros::Duration(0.05).sleep();
             continue;
         }
         catch(tf2::ConnectivityException& ex){
             ROS_WARN("%s",ex.what());
+            ros::Duration(0.05).sleep();
             continue;
         }
         catch(tf2::ExtrapolationException& ex){
             ROS_WARN("%s",ex.what());
+            ros::Duration(0.05).sleep();
             continue;
         }
         
