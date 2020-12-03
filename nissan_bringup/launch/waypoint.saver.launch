@@ -4,7 +4,7 @@
 'roslaunch', 'waypoint_maker', 'waypoint_saver.launch', 'save_finename:=/mnt/storage_1tb/waypoint/del1.csv', 'input_type:=0', 'save_velocity:=True', 'interval:=1', 'lane_topic:=/lane_waypoints_array'
 -->
     <arg name="input_type" default="0" />
-    <arg name="save_finename" default="/tmp/saved_waypoints.csv" />
+    <!--<arg name="save_finename" default="/tmp/saved_waypoints.csv" /> -->
     <arg name="interval" default="1" />
     <arg name="pose_topic" default="current_pose" />
     <arg name="velocity_topic" default="current_velocity" />
@@ -18,7 +18,7 @@
         <param name="save_velocity" value="$(arg save_velocity)" />
 	</node>
 	<node pkg="waypoint_maker" type="waypoint_extractor" name="waypoint_extractor" output="screen" if="$(arg input_type)">
-		<param name="lane_csv" value="$(arg save_finename)" />
+		<!--<param name="lane_csv" value="$(arg save_finename)" /> -->
 		<param name="lane_topic" value="$(arg lane_topic)" />
 	</node>
 

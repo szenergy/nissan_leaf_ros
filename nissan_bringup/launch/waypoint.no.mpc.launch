@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Simple Demo launch - following waypoints with MPC
+-->
+<launch>
+
+    <!-- Load waypoints csv and necessary publish topics fro MPC waypoint converter-->
+    <node pkg="nissan_bringup" type="bare_planner.py" name="bare_planner_py"/>
+    <node pkg="nissan_bringup" type="global_waypoint_monitor.py" name="global_waypoint_monitor_py"/>
+    <node pkg="nissan_bringup" type="waypoint_loader.py" name="waypoint_loader_py" output="screen"/>
+
+</launch>
