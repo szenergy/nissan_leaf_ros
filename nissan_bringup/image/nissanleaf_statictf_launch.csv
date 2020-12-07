@@ -1,9 +1,0 @@
-parent;child;x;y;z;roll;pitch;yaw
-/base_link;/duro_gps;0.0;0.0;0.2;0.0;0.0;0.0
-/base_link;/zed_camera_front;1.874;0.0;1.286;0.0;0.0;0.0
-/base_link;/sick;3.707;-0.351;0.113;0.0;0.0;0.0
-/base_link;/duro_gps_imu;0.0;0.0;0.2;0.0;0.0;0.0
-/base_link;/ouster_right;1.769;-0.58;1.278;0.0;0.0;0.0
-/base_link;/velodyne_left;1.749;0.703;1.166;0.0;0.0;-1.0471975511965976
-/base_link;/velodyne_right;1.749;-0.703;1.166;0.0;0.0;1.0471975511965976
-/base_link;/ouster_left;1.769;0.58;1.278;0.0;0.0;0.0
