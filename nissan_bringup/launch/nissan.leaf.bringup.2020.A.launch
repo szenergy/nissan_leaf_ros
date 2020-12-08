@@ -3,10 +3,11 @@
     Nissan Bringup verison 2020.A:
     - LIDAR: 2 x Ouster OS1-64
     - LIDAR: 2 x Velodyne VLP-16
-    - LIDAR: 1 x Sick
-    - GPS:   1 x Duro 
-    - GPS:   1 x NovAtel (map->base_link nova_global_frame_tf_publisher.launch)
-    - CAM:   1 x Zed
+    - LIDAR: 1 x Sick LMS-111
+    - RADAR: 1 x Continental ARS-408
+    - GPS:   1 x SwiftNav Duro Inertial
+    - GPS:   1 x NovAtel PW7720E1-DDD-RZN-TBE-P1 (map->base_link nova_global_frame_tf_publisher.launch) 
+    - CAM:   1 x Stereolabs Zed
     - CAN:   nissan_can_control.launch
     - TF:    nissanleaf_statictf_launch.launch
 -->
@@ -14,6 +15,7 @@
   <include file="$(find nissan_bringup)/launch/sensory/ouster_two_lidar.launch" />
   <include file="$(find nissan_bringup)/launch/sensory/velodyne_two_lidar.launch" />
   <include file="$(find nissan_bringup)/launch/sensory/sick_lms_111.nissan.launch" />
+  <include file="$(find nissan_bringup)/launch/sensory/radar_continental.launch" />
   <!--<include file="$(find nmea_navsat_driver)/launch/nmea_serial_driver.launch" />-->
   <include file="$(find nissan_bringup)/launch/sensory/gps.duro.launch" />
   <include file="$(find nissan_bringup)/launch/sensory/gps.nova.launch" />
@@ -22,8 +24,7 @@
   <!--<include file="$(find nissan_bringup)/launch/tf_setup/tf_duro_global_frame_tf_publisher.statictf.launch" />-->   <!--Start Duro-->
   <include file="$(find nissan_bringup)/launch/tf_setup/tf_nissanleaf_statictf.launch" />
   <include file="$(find can_leaf_driver)/launch/nissan_can_control.launch" />
-  <node pkg="nissan_bringup" type="vehicle_cmd_converter.py" name="vehicle_cmd_converter"/> <!-- temporary fix TODO-->
-  <node pkg="nissan_bringup" type="current_pose_from_tf.py" name="current_pose_from_tf"/> <!-- temporary fix TODO-->
+   <node pkg="nissan_bringup" type="current_pose_from_tf.py" name="current_pose_from_tf"/> <!-- temporary fix TODO-->
   <node pkg="topic_tools" type="relay" name="cmd_relay" args="/ctrl_raw /ctrl_cmd" />
   <!--<node name="pcd_to_pointcloud" pkg="pcl_ros" type="pcd_to_pointcloud" args="$(find nissan_bringup)/utils/zala_egyetemi_ascii_demo_map.pcd 10 _frame_id:=map_zala_0" />-->
 </launch>

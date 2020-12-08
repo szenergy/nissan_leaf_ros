@@ -5,6 +5,7 @@
 <launch>
 
     <!-- Load waypoints csv and necessary publish topics fro MPC waypoint converter-->
+<!--    <include file="$(find nissan_bringup)/launch/waypoint.no.mpc.launch" /> -->
     <node pkg="nissan_bringup" type="bare_planner.py" name="bare_planner_py"/>
     <node pkg="nissan_bringup" type="global_waypoint_monitor.py" name="global_waypoint_monitor_py"/>
     <node pkg="nissan_bringup" type="waypoint_loader.py" name="waypoint_loader_py" output="screen"/>
@@ -23,19 +24,19 @@
         <param name="ctrl_period" value="0.03"/>
         <param name="traj_resample_dist" value="0.1"/>
         <param name="admisible_position_error" value="5"/>
-        <param name="admisible_yaw_error_deg" value="45"/>
+        <param name="admisible_yaw_error_deg" value="90"/>
         <param name="path_smoothing_times" value="1"/>
         <param name="show_debug_info" value="false"/>
         <param name="enable_yaw_recalculation" value="true"/>
         <param name="enable_path_smoothing" value="true"/>
-        <param name="path_filter_moving_ave_num" value="50"/>
-        <param name="curvature_smoothing_num" value="12"/>
+        <param name="path_filter_moving_ave_num" value="35"/>
+        <param name="curvature_smoothing_num" value="35"/>
         <param name="steering_lpf_cutoff_hz" value="3"/>
         <param name="qp_solver_type" value="unconstraint_fast"/>
         <param name="qpoases_max_iter" value="500"/>
-        <param name="vehicle_model_type" value="kinematics"/>
-        <param name="mpc_prediction_horizon" value="30"/>
-        <param name="mpc_prediction_sampling_time" value="0.5"/>
+        <param name="vehicle_model_type" value="kinematics_no_delay"/>
+        <param name="mpc_prediction_horizon" value="70"/>
+        <param name="mpc_prediction_sampling_time" value="0.1"/>
         <param name="mpc_weight_lat_error" value="5"/>
         <param name="mpc_weight_heading_error" value="0"/>
         <param name="mpc_weight_heading_error_squared_vel_coeff" value="5"/>
@@ -44,9 +45,9 @@
         <param name="mpc_weight_lat_jerk" value="0"/>
         <param name="mpc_weight_terminal_lat_error" value="0"/>
         <param name="mpc_weight_terminal_heading_error" value="0"/>
-        <param name="mpc_zero_ff_steer_deg" value="0"/>
+        <param name="mpc_zero_ff_steer_deg" value="2"/>
         <param name="delay_compensation_time" value="0"/>
-        <param name="vehicle_model_steer_tau" value="0.2"/>
+        <param name="vehicle_model_steer_tau" value="0.001"/>
         <param name="vehicle_model_wheelbase" value="2.7"/>
         <param name="steer_lim_deg" value=" 32"/>
         <param name="steering_gear_ratio" value="20"/>

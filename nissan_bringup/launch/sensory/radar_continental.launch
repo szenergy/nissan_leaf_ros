@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launch>
+  <node pkg="radar_conti" type="radar_conti" name="radar_conti_1" output="screen" />
+</launch>
