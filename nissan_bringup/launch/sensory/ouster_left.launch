@@ -1,5 +1,5 @@
 <!--
-In this case the computer is 192.168.1.100, the left Ouster is 192.168.1.204, the right is 205.
+In this case the computer is 192.168.1.5, the left Ouster is 192.168.1.15, the right is 16.
 (This also works with os1-990123456789.local instead of 192.168.x.x)
 The published topcs in ths case:
     /left_os1/os1_cloud_node/imu
@@ -10,11 +10,11 @@ The published topcs in ths case:
 <launch>
     <group ns="left_os1">
         <include file="$(find nissan_bringup)/launch/sensory/ouster_instance.launch" >
-            <arg name="os1_hostname" value="192.168.1.15"/>
-            <arg name="os1_udp_dest" value="192.168.1.5"/>
-            <arg name="os1_lidar_port" default="7502" doc="port to which the sensor should send lidar data"/>
-            <arg name="os1_imu_port" default="7503" doc="port to which the sensor should send imu data"/>
-            <arg name="tf_prefix" default="left_os1"/>
+            <arg name="sensor_hostname" value="192.168.1.15"/>
+            <arg name="udp_dest" value="192.168.1.5"/>
+            <arg name="lidar_port" value="7502" doc="port to which the sensor should send lidar data"/>
+            <arg name="imu_port" value="7503" doc="port to which the sensor should send imu data"/>
+            <arg name="tf_prefix" value="left_os1"/>
         </include>
     </group>
 </launch>
