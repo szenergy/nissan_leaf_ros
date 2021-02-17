@@ -1,0 +1,3 @@
+<launch>
+    <param name="robot_description" textfile="$(find nissan_bringup)/param/nissan_leaf_robotdescription.ref.xml" />
+</launch>
