@@ -27,4 +27,5 @@
    <node pkg="nissan_bringup" type="current_pose_from_tf.py" name="current_pose_from_tf"/> <!-- temporary fix TODO-->
   <node pkg="topic_tools" type="relay" name="cmd_relay" args="/ctrl_raw /ctrl_cmd" />
   <!--<node name="pcd_to_pointcloud" pkg="pcl_ros" type="pcd_to_pointcloud" args="$(find nissan_bringup)/utils/zala_egyetemi_ascii_demo_map.pcd 10 _frame_id:=map_zala_0" />-->
+  <include file="$(find nissan_bringup)/launch/sensory/car_parameters_leaf.launch" />
 </launch>
