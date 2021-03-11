@@ -8,8 +8,12 @@
 <launch>
 <param name = "car_width" value="1.77"/>                            <!--A jármű teljes szélessége [m]-->
 <param name = "car_length" value= "4.535"/>                         <!--A jármű teljes hosszúsága [m]-->
-<param name = "wheelbase" value= "2.7"/>                            <!--A jármű nyomtávja [m]-->
+<param name = "wheelbase" value= "2.7"/>                            <!--A jármű tengelytávja [m]-->
 <param name = "rear_axle_car_front_distance" value= "3.707"/>       <!--A jármű hátsó tengelye és a kocsi eleje közötti távolság [m]-->
 <param name = "max_wheel_angle" value= "31.0"/>                     <!--Maximális kormányszög [deg]-->
 <param name = "min_wheel_angle" value= "-31.0"/>                    <!--Minimális kormányszög [deg]-->
+
+
+
+
 </launch>
