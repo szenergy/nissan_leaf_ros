@@ -6,20 +6,23 @@
 
 
 <launch>
-<param name = "car_width" value="1.77"/>                            <!--A jármű teljes szélessége [m]-->
-<param name = "car_length" value= "4.535"/>                         <!--A jármű teljes hosszúsága [m]-->
-<param name = "wheelbase" value= "2.7"/>                            <!--A jármű tengelytávja [m]-->
-<param name = "rear_axle_car_front_distance" value= "3.707"/>       <!--A jármű hátsó tengelye és a kocsi eleje közötti távolság [m]-->
-<param name = "max_wheel_angle" value= "31.0"/>                     <!--Maximális kormányszög [deg]-->
-<param name = "min_wheel_angle" value= "-31.0"/>                    <!--Minimális kormányszög [deg]-->
+<arg name="namespace"  value="leaf"/>
 
-<!--A base_link és a laser frame paraméterei, az irányok a base_link-ről mutatnak a laser frame-re  -->
-<param name = "base_link_laser_trans_x" value="3.707"/>
-<param name = "base_link_laser_trans_y" value="-0.351"/>
-<param name = "base_link_laser_trans_z" value="0.113"/>
-<param name = "base_link_laser_rot_x" value="0.0"/>
-<param name = "base_link_laser_rot_y" value="0.0"/>
-<param name = "base_link_laser_rot_z" value="0.0"/>
+
+    <param name = "$(arg namespace)/car_width" value="1.77"/>                            <!--A jármű teljes szélessége [m]-->
+    <param name = "$(arg namespace)/car_length" value= "4.535"/>                         <!--A jármű teljes hosszúsága [m]-->
+    <param name = "$(arg namespace)/wheelbase" value= "2.7"/>                            <!--A jármű tengelytávja [m]-->
+    <param name = "$(arg namespace)/rear_axle_car_front_distance" value= "3.707"/>       <!--A jármű hátsó tengelye és a kocsi eleje közötti távolság [m]-->
+    <param name = "$(arg namespace)/max_wheel_angle" value= "31.0"/>                     <!--Maximális kormányszög [deg]-->
+    <param name = "$(arg namespace)/min_wheel_angle" value= "-31.0"/>                    <!--Minimális kormányszög [deg]-->
+
+    <!--A base_link és a laser frame paraméterei, az irányok a base_link-ről mutatnak a laser frame-re  -->
+    <param name = "$(arg namespace)/base_link_laser_trans_x" value="3.707"/>
+    <param name = "$(arg namespace)/base_link_laser_trans_y" value="-0.351"/>
+    <param name = "$(arg namespace)/base_link_laser_trans_z" value="0.113"/>
+    <param name = "$(arg namespace)/base_link_laser_rot_x" value="0.0"/>
+    <param name = "$(arg namespace)/base_link_laser_rot_y" value="0.0"/>
+    <param name = "$(arg namespace)/base_link_laser_rot_z" value="0.0"/>
 
 
 
