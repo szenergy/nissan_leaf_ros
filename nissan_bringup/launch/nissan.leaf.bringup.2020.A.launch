@@ -10,6 +10,7 @@
     - CAM:   1 x Stereolabs Zed
     - CAN:   nissan_can_control.launch
     - TF:    nissanleaf_statictf_launch.launch
+    - Car parameters: car_parameters_leaf.launch
 -->
 <launch>
   <include file="$(find nissan_bringup)/launch/sensory/ouster_two_lidar.launch" />

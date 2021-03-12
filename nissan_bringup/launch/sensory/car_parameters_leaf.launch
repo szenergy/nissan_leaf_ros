@@ -8,6 +8,8 @@
 <launch>
 <arg name="namespace"  value="leaf"/>
 
+    <param name ="car_name" value="leaf"/> 
+
 
     <param name = "$(arg namespace)/car_width" value="1.77"/>                            <!--A jármű teljes szélessége [m]-->
     <param name = "$(arg namespace)/car_length" value= "4.535"/>                         <!--A jármű teljes hosszúsága [m]-->
@@ -15,6 +17,9 @@
     <param name = "$(arg namespace)/rear_axle_car_front_distance" value= "3.707"/>       <!--A jármű hátsó tengelye és a kocsi eleje közötti távolság [m]-->
     <param name = "$(arg namespace)/max_wheel_angle" value= "31.0"/>                     <!--Maximális kormányszög [deg]-->
     <param name = "$(arg namespace)/min_wheel_angle" value= "-31.0"/>                    <!--Minimális kormányszög [deg]-->
+    <param name = "$(arg namespace)/max_acceleration" value= "3.0" />                    <!--Maximális gyorsulás [m/s^2]-->         
+    <param name = "$(arg namespace)/max_deceleration" value= "6.0" />                    <!--Maximális lassulás [m/s^2]-->
+
 
     <!--A base_link és a laser frame paraméterei, az irányok a base_link-ről mutatnak a laser frame-re  -->
     <param name = "$(arg namespace)/base_link_laser_trans_x" value="3.707"/>
