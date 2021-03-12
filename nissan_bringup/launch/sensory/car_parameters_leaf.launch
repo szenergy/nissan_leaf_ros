@@ -8,7 +8,7 @@
 <launch>
 <arg name="namespace"  value="leaf"/>
 
-    <param name ="car_name" value="leaf"/> 
+    <param name ="car_name" value="leaf" type="str"/> 
 
 
     <param name = "$(arg namespace)/car_width" value="1.77"/>                            <!--A jármű teljes szélessége [m]-->
