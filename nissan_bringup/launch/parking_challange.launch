@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Launch nodes for Shell parking challange.
+-->
+<launch>
+
+    <!--  publish necessary topics for MPC waypoint converter-->
+    <node pkg="nissan_bringup" type="bare_planner.py" name="bare_planner_py"/>
+    <node pkg="nissan_bringup" type="global_waypoint_monitor.py" name="global_waypoint_monitor_py"/>
+  
+</launch>
