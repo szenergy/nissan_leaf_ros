@@ -46,7 +46,7 @@
         <param name="mpc_weight_terminal_lat_error" value="0"/>
         <param name="mpc_weight_terminal_heading_error" value="0"/>
         <param name="mpc_zero_ff_steer_deg" value="2"/>
-        <param name="delay_compensation_time" value="0"/>
+        <param name="delay_compensation_time" value="0.1"/>
         <param name="vehicle_model_steer_tau" value="0.001"/>
         <param name="vehicle_model_wheelbase" value="2.7"/>
         <param name="steer_lim_deg" value=" 32"/>
