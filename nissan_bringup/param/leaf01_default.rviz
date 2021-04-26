@@ -624,7 +624,7 @@ Visualization Manager:
       Name: Debug
   Enabled: true
   Global Options:
-    Background Color: 211; 212; 204
+    Background Color: 255; 255; 255
     Default Light: true
     Fixed Frame: map_zala_0
     Frame Rate: 30
