@@ -1,7 +1,11 @@
 <launch>
   <node pkg="gps_tf_publisher" type="gps_tf_publisher" name="novatel_leaf_tf_publisher">
-    <!-- <remap from="gnss_pose" to="current_pose"/> -->
     <remap from="gps/current_pose" to="/gps/nova/current_pose"/>
   </node>
   <node pkg="tf" type="static_transform_publisher" name="novatel_static_tf_publisher" args="-1.33 0.408 -1.362 0 0 0 gps base_link 5"/>
+  
+  <!-- GPS debug -->
+  <!-- 
+  <node pkg="tf" type="static_transform_publisher" name="alt_duro_static_tf_publisher" args="0.196 0.0 -1.1 0.0 0.0 0.0 gps base_link_alt 10"/>
+  -->
 </launch>

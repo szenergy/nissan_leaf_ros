@@ -5,21 +5,24 @@ import tf
 import geometry_msgs.msg
 
 if __name__ == '__main__':
-    rospy.init_node('current_pose_from_tf')
+    first_run = True
+    rospy.init_node('gps_debug_current_pose_from_tf')
+    rospy.loginfo("Init")
 
     tfBuffer = tf2_ros.Buffer()
     listener = tf2_ros.TransformListener(tfBuffer)
 
-    current_pub = rospy.Publisher("/current_pose", geometry_msgs.msg.PoseStamped,queue_size=1)
+    current_pub = rospy.Publisher("/current_pose_alt", geometry_msgs.msg.PoseStamped,queue_size=1)
 
     rate = rospy.Rate(10.0)
     while not rospy.is_shutdown():
         try:
-            trans = tfBuffer.lookup_transform("map", "base_link", rospy.Time())
+            trans = tfBuffer.lookup_transform("map", "base_link_alt", rospy.Time())
         except (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):
+            #rospy.logwarn("Except")
             continue
 
-
+        #rospy.loginfo(trans)
         cmd = geometry_msgs.msg.PoseStamped()
         cmd.header.stamp = rospy.Time.now()
         cmd.header.frame_id = "map"
