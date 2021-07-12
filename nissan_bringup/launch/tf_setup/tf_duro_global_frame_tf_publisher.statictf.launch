@@ -6,7 +6,7 @@
   
   <!-- GPS debug -->
   <!-- 
-  <node pkg="tf" type="static_transform_publisher" name="alt_novatel_static_tf_publisher" args="-1.33 0.408 -1.362 0 0 0 gps base_link_alt 5"/>
+  <node pkg="tf" type="static_transform_publisher" name="alt_novatel_static_tf_publisher" args="-1.33 0.408 -1.362 0 0 0 gps_alt base_link_alt 5"/>
   -->
 </launch>
 

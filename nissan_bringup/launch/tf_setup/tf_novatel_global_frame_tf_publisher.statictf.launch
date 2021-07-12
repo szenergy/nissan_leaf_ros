@@ -4,8 +4,13 @@
   </node>
   <node pkg="tf" type="static_transform_publisher" name="novatel_static_tf_publisher" args="-1.33 0.408 -1.362 0 0 0 gps base_link 5"/>
   
-  <!-- GPS debug -->
+  <!-- GPS debug
+  static_transform_publisher x y z qx qy qz qw frame_id child_frame_id  period_in_ms
+  period_in_ms = 5ms ==> 200 Hz 
+  -->
   <!-- 
-  <node pkg="tf" type="static_transform_publisher" name="alt_duro_static_tf_publisher" args="0.196 0.0 -1.1 0.0 0.0 0.0 gps base_link_alt 10"/>
+  <node pkg="tf" type="static_transform_publisher" name="alt_duro_static_tf_publisher" args="0.196 0.0 -1.1 0.0 0.0 0.0 gps_alt base_link_alt 10"/>
+  <node pkg="nissan_bringup" type="current_pose_from_tf_gps_debug.py" name="debug_current_pose_from_tf_gps_debug_py"/>
+  <node pkg="nissan_bringup" type="gps_tf_pub_alt_debug.py" name="debug_gps_tf_pub_alt_debug_py"/>
   -->
 </launch>
