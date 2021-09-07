@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<launch>
+  <include file="$(find nissan_bringup)/launch/sensory/ouster_right.launch" />
+  <include file="$(find zed_wrapper)/launch/zed_no_tf_hd1080.launch" />
+  <include file="$(find nissan_bringup)/launch/tf_setup/tf_novatel_global_frame_tf_publisher.statictf.launch" />  <!--Start Nova-->
+  <include file="$(find nissan_bringup)/launch/tf_setup/tf_nissanleaf_statictf.launch" />
+  <node pkg="nissan_bringup" type="current_pose_from_tf" name="current_pose_from_tf"/> <!-- temporary fix TODO-->
+  <include file="$(find nissan_bringup)/launch/sensory/car_parameters_leaf.launch" />
+  <include file="$(find nissan_bringup)/launch/sensory/gps.duro.launch" />
+  <include file="$(find nissan_bringup)/launch/sensory/gps.nova.launch" />
+
+</launch>
