@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<launch>
+  <include file="$(find nissan_bringup)/launch/sensory/ouster_right.launch" />
+  <include file="$(find nissan_bringup)/launch/tf_setup/tf_novatel_global_frame_tf_publisher.statictf.launch" />  <!--Start Nova-->
+  <include file="$(find nissan_bringup)/launch/tf_setup/tf_nissanleaf_statictf.launch" />
+  <include file="$(find nissan_bringup)/launch/sensory/nissan_can_control.launch" />
+  <include file="$(find nissan_bringup)/launch/sensory/gps.nova.launch" />
+  <include file="$(find ros_guis)/launch/temporary.launch" /> 
+
+</launch>
