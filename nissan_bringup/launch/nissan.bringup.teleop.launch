@@ -9,6 +9,7 @@
   <include file="$(find nissan_bringup)/launch/tf_setup/tf_novatel_global_frame_tf_publisher.statictf.launch" />  <!--Start Nova-->
   <include file="$(find nissan_bringup)/launch/tf_setup/tf_nissanleaf_statictf.launch" />
   <include file="$(find can_leaf_driver)/launch/nissan_can_control.launch" />
+  <node pkg="nissan_bringup" type="steering_path_marker.py" name="steering_path_marker_py"/> 
   <node pkg="nissan_bringup" type="current_pose_from_tf" name="current_pose_from_tf"/> 
   <node pkg="topic_tools" type="relay" name="cmd_relay" args="/ctrl_raw /ctrl_cmd" />
   <include file="$(find nissan_bringup)/launch/sensory/car_parameters_leaf.launch" />
