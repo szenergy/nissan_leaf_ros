@@ -3,9 +3,9 @@
   <arg name="points_node" default="/points_no_ground" /><!--CHANGE THIS TO READ WHETHER FROM VSCAN OR POINTS_RAW -->
   <arg name="remove_ground" default="false" />
   <arg name="downsample_cloud" default="false" /> <!-- Apply VoxelGrid Filter with the value given by "leaf_size"-->
-  <arg name="leaf_size" default="0.1" /><!-- Voxel Grid Filter leaf size-->
+  <arg name="leaf_size" default="0.12" /><!-- Voxel Grid Filter leaf size-->
   <arg name="cluster_size_min" default="5" /><!-- Minimum number of points to consider a cluster as valid-->
-  <arg name="cluster_size_max" default="350" /><!-- Maximum number of points to allow inside a cluster-->
+  <arg name="cluster_size_max" default="800" /><!-- Maximum number of points to allow inside a cluster-->
   <arg name="sync" default="false" />
   <arg name="use_diffnormals" default="false" />
   <arg name="pose_estimation" default="false" />
