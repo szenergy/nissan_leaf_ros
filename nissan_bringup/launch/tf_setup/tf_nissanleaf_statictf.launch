@@ -12,6 +12,7 @@
   <node args="1.769 -0.58 1.278 0.0 0.0 0.0 /base_link right_os1/os1_sensor 50" name="ouster_right_tf_publisher" pkg="tf" type="static_transform_publisher"/>
   <node args="0.0 0.0 0.2 0.0 0.0 0.0 /base_link /duro_gps_imu 50" name="duro_gps_imu_tf_publisher" pkg="tf" type="static_transform_publisher"/>
   <node args="1.769 0.58 1.278 0.0 0.0 0.0 /base_link left_os1/os1_sensor 50" name="ouster_left_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="0.0 0.0 -0.316 0.0 0.0 0.0 /base_link /ground_link 50" name="base_link_ground_link_publisher" pkg="tf" type="static_transform_publisher"/>
   <!-- Note the order ypr instead of the often used rpy -->
   <!-- Ouster TF: -->
   <node args="0.0 0.0 0.0 0.0 0.0 0.0 /left_os1/os1_sensor /left_os1/os1_lidar 50" name="os1sensorlidarleft" pkg="tf" type="static_transform_publisher"/>
