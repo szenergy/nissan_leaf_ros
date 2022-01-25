@@ -6,6 +6,7 @@ import autoware_msgs.msg as autmsg
 import geometry_msgs.msg as geomsg
 import std_msgs.msg as stdmsg
 import math
+import tf2_ros
 
 
 
@@ -95,6 +96,27 @@ def vehicle_status_callback(data):
     else:
         pose.pose.orientation.z = 0.0
         pose.pose.orientation.w = 1.0
+    
+    br = tf2_ros.TransformBroadcaster()
+    t = geomsg.TransformStamped()
+    t.header.stamp = rospy.Time.now()
+    t.header.frame_id = "odom"
+    t.child_frame_id = "base_link"
+    t.transform.translation.x = x
+    t.transform.translation.y = y
+    t.transform.translation.z = 0.0
+    
+    t.transform.rotation.x = 0.0
+    t.transform.rotation.y = 0.0
+    if reversed == False:
+        t.transform.rotation.z = math.sin(mod_theta/2.0)
+        t.transform.rotation.w = math.cos(mod_theta/2.0)
+    else:
+        t.transform.rotation.z = 0.0
+        t.transform.rotation.w = 1.0
+
+    br.sendTransform(t)
+
 
     
 
