@@ -1,0 +1,608 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Lidar1
+      Splitter Ratio: 0.7486910820007324
+    Tree Height: 457
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /Interact1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+      - /Orbit1
+      - /aaaa1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: /left_os1
+  - Class: autoware_launcher_rviz::ModulePanel
+    Name: ModulePanel
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.6000000238418579
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: true
+          Max Color: 255; 255; 255
+          Max Intensity: 2000
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: /right_os1
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.05999999865889549
+          Style: Flat Squares
+          Topic: /right_os1/os1_cloud_node/points
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 0.6000000238418579
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: true
+          Max Color: 255; 255; 255
+          Max Intensity: 2000
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: /left_os1
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.05999999865889549
+          Style: Flat Squares
+          Topic: /left_os1/os1_cloud_node/points
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/LaserScan
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 800
+          Min Color: 0; 0; 0
+          Min Intensity: 100
+          Name: sick
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.10000000149011612
+          Style: Flat Squares
+          Topic: /scan
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 0.6000000238418579
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: true
+          Max Color: 255; 255; 255
+          Max Intensity: 200
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: /left_velo
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.03999999910593033
+          Style: Flat Squares
+          Topic: /velodyne_left/velodyne_points
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 0.6000000238418579
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: true
+          Max Color: 255; 255; 255
+          Max Intensity: 200
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: /right_velo
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.03999999910593033
+          Style: Flat Squares
+          Topic: /velodyne_right/velodyne_points
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 1118
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: pointcloud2_free_choice
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.03999999910593033
+          Style: Flat Squares
+          Topic: /os1_cloud_node/points
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+      Enabled: true
+      Name: Lidar
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 1
+          Axes Length: 1
+          Axes Radius: 0.10000000149011612
+          Class: rviz/Pose
+          Color: 255; 25; 0
+          Enabled: true
+          Head Length: 0.30000001192092896
+          Head Radius: 0.10000000149011612
+          Name: current_pose
+          Shaft Length: 1
+          Shaft Radius: 0.05000000074505806
+          Shape: Arrow
+          Topic: /current_pose
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Axes Length: 1
+          Axes Radius: 0.10000000149011612
+          Class: rviz/Pose
+          Color: 78; 154; 6
+          Enabled: true
+          Head Length: 0.30000001192092896
+          Head Radius: 0.10000000149011612
+          Name: nova/current_pose
+          Shaft Length: 0.5
+          Shaft Radius: 0.05000000074505806
+          Shape: Arrow
+          Topic: /gps/nova/current_pose
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Axes Length: 1
+          Axes Radius: 0.10000000149011612
+          Class: rviz/Pose
+          Color: 196; 160; 0
+          Enabled: true
+          Head Length: 0.30000001192092896
+          Head Radius: 0.10000000149011612
+          Name: duro/current_pose
+          Shaft Length: 0.5
+          Shaft Radius: 0.05000000074505806
+          Shape: Arrow
+          Topic: /gps/duro/current_pose
+          Unreliable: false
+          Value: true
+      Enabled: false
+      Name: Gps
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/MarkerArray
+          Enabled: false
+          Marker Topic: /radar_objects_marker
+          Name: Radar
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: false
+        - Class: rviz/Image
+          Enabled: true
+          Image Topic: /zed_node/left/image_rect_color
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: Zed
+          Normalize Range: true
+          Queue Size: 2
+          Transport Hint: compressed
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: Camera+radar
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/TF
+          Enabled: true
+          Frame Timeout: 20
+          Frames:
+            All Enabled: false
+          Marker Scale: 2
+          Name: TF
+          Show Arrows: true
+          Show Axes: true
+          Show Names: false
+          Tree:
+            {}
+          Update Interval: 20
+          Value: true
+        - Align Bottom: false
+          Background Alpha: 0
+          Background Color: 0; 0; 0
+          Class: jsk_rviz_plugin/OverlayText
+          Enabled: true
+          Foreground Alpha: 0.800000011920929
+          Foreground Color: 6; 65; 87
+          Invert Shadow: false
+          Name: OverlayText
+          Overtake BG Color Properties: false
+          Overtake FG Color Properties: false
+          Overtake Position Properties: true
+          Topic: /state_text
+          Value: true
+          font: Ubuntu Mono
+          height: 1128
+          left: 0
+          line width: 50
+          text size: 40
+          top: 0
+          width: 1128
+      Enabled: false
+      Name: Debug
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/MarkerArray
+          Enabled: true
+          Marker Topic: /lanelet2_map_viz
+          Name: Lanelet2 Maps
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: true
+      Enabled: true
+      Name: HD Maps
+    - Class: rviz/Group
+      Displays:
+        - Buffer length: 100
+          Class: jsk_rviz_plugin/Plotter2D
+          Enabled: true
+          Name: Vehicle speed [km/h]
+          Show Value: true
+          Topic: /vehicle_speed_kmph
+          Value: true
+          auto color change: false
+          auto scale: true
+          background color: 0; 0; 0
+          backround alpha: 0
+          border: true
+          foreground alpha: 0.699999988079071
+          foreground color: 0; 0; 0
+          height: 128
+          left: 128
+          linewidth: 2
+          max color: 255; 0; 0
+          max value: 1
+          min value: -1
+          show caption: true
+          text size: 12
+          top: 128
+          update interval: 0.03999999910593033
+          width: 200
+        - Buffer length: 100
+          Class: jsk_rviz_plugin/Plotter2D
+          Enabled: true
+          Name: Steering angle [deg]
+          Show Value: true
+          Topic: /wheel_angle_deg
+          Value: true
+          auto color change: false
+          auto scale: true
+          background color: 0; 0; 0
+          backround alpha: 0
+          border: true
+          foreground alpha: 0.699999988079071
+          foreground color: 0; 0; 0
+          height: 128
+          left: 350
+          linewidth: 2
+          max color: 255; 0; 0
+          max value: 1
+          min value: -1
+          show caption: true
+          text size: 12
+          top: 128
+          update interval: 0.03999999910593033
+          width: 200
+      Enabled: false
+      Name: Demo
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.800000011920929
+          Cell Size: 10
+          Class: rviz/Grid
+          Color: 211; 215; 207
+          Enabled: false
+          Line Style:
+            Line Width: 0.029999999329447746
+            Value: Lines
+          Name: map_zala_0
+          Normal Cell Count: 0
+          Offset:
+            X: 440
+            Y: -1440
+            Z: 0
+          Plane: XY
+          Plane Cell Count: 300
+          Reference Frame: map_zala_0
+          Value: false
+        - Alpha: 0.20000000298023224
+          Cell Size: 1
+          Class: rviz/Grid
+          Color: 136; 138; 133
+          Enabled: true
+          Line Style:
+            Line Width: 0.029999999329447746
+            Value: Lines
+          Name: map_gyor_0
+          Normal Cell Count: 0
+          Offset:
+            X: 0
+            Y: 0
+            Z: -2
+          Plane: XY
+          Plane Cell Count: 600
+          Reference Frame: map_gyor_0
+          Value: true
+      Enabled: false
+      Name: Grids
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: Leaf3D
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+  Enabled: true
+  Global Options:
+    Background Color: 255; 255; 255
+    Default Light: true
+    Fixed Frame: base_link
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetGoal
+      Topic: /stable_goalpose
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 14.203478813171387
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Focal Shape Fixed Size: false
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.5103984475135803
+      Target Frame: base_link
+      Value: Orbit (rviz)
+      Yaw: 5.658579349517822
+    Saved:
+      - Class: rviz/Orbit
+        Distance: 25.934226989746094
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: -52.760894775390625
+          Y: 50.12240219116211
+          Z: 162.5790557861328
+        Focal Shape Fixed Size: false
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: Orbit
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 0.6203973293304443
+        Target Frame: <Fixed Frame>
+        Value: Orbit (rviz)
+        Yaw: 3.2454092502593994
+      - Class: rviz/Orbit
+        Distance: 10
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: 0
+          Y: 0
+          Z: 0
+        Focal Shape Fixed Size: false
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: Orbit
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 1.0153980255126953
+        Target Frame: left_os1/os1_lidar
+        Value: Orbit (rviz)
+        Yaw: 1.2053978443145752
+      - Class: rviz/ThirdPersonFollower
+        Distance: 29.435644149780273
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: -6.202284812927246
+          Y: -6.824217796325684
+          Z: -5.700288056686986e-6
+        Focal Shape Fixed Size: true
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: aaaa
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 0.5660215616226196
+        Target Frame: <Fixed Frame>
+        Value: ThirdPersonFollower (rviz)
+        Yaw: 3.3334407806396484
+      - Class: rviz/Orbit
+        Distance: 0.07249250262975693
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: 33.868736267089844
+          Y: 32.86787796020508
+          Z: 236.27149963378906
+        Focal Shape Fixed Size: false
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: bbbb
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 0.9197964072227478
+        Target Frame: map_gyor_0
+        Value: Orbit (rviz)
+        Yaw: 5.768581867218018
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1015
+  Hide Left Dock: false
+  Hide Right Dock: false
+  ModulePanel:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd0000000400000000000001a40000039dfc0200000019fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afc0000003d00000206000000c900fffffffa000000020100000003fb0000000a0049006d0061006700650100000000ffffffff0000000000000000fb0000000c00430061006d0065007200610000000000ffffffff0000000000000000fb000000100044006900730070006c0061007900730100000000000001360000015600fffffffb00000040002f007a00650064005f006e006f00640065002f00720069006700680074002f0069006d006100670065005f0072006500630074005f0063006f006c006f00720100000620000001270000000000000000fb00000016004d006f00640075006c006500500061006e0065006c00000002e0000000a20000006e00fffffffb00000022004100750074006f00770061007200650020004c00610075006e006300680065007200000001ec000000b10000000000000000fb0000001e0051007500690063006b0053007400610072007400500061006e0065006c0000000200000000790000000000000000fb0000000a0049006d006100670065000000026c000001780000000000000000fb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000120049006d006100670065005f0072006100770000000000ffffffff0000000000000000fb0000000c00430061006d006500720061000000024e000001710000000000000000fb000000120049006d00610067006500200052006100770100000421000000160000000000000000fb0000000a0049006d0061006700650100000319000000cb0000000000000000fb00000018004d006f00640075006c0065002000500061006e0065006c0100000217000000a80000000000000000fb000000220049006d0061006700650056006900650077006500720050006c007500670069006e0100000275000001e80000000000000000fb000000220049006d0061006700650056006900650077006500720050006c007500670069006e000000039e000000bb0000000000000000fb0000000a0049006d006100670065030000060e000000ba000003a500000208fb0000000a0049006d0061006700650100000317000000cd0000000000000000fb0000000a0049006d0061006700650100000319000000cb0000000000000000fb00000036002f00630061006d006500720061005f00730074007200650061006d002f007300650067006d0065006e0074006100740069006f006e0000000259000001290000000000000000fb0000003e002f007a00650064005f006e006f00640065002f006c006500660074002f0069006d006100670065005f0072006500630074005f0063006f006c006f00720000000388000000500000000000000000fb00000006005a006500640100000249000001910000001600ffffff000000010000017b0000039dfc0200000005fc0000003d0000039d000000a400fffffffa000000010100000002fb0000000a0049006d0061006700650000000000ffffffff0000000000000000fb0000000a0056006900650077007301000005d60000017b0000010000fffffffb0000001e0054006f006f006c002000500072006f00700065007200740069006500730000000114000001f70000005c00fffffffb000000240054007200610066006600690063004c00690067006800740050006c007500670069006e00000003e8000001790000000000000000fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000001200530065006c0065006300740069006f006e010000025a000000b2000000000000000000000002000009d1000000a8fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000009d10000005cfc0100000002fb0000000800540069006d00650000000000000009d1000002eb00fffffffb0000000800540069006d00650100000000000004500000000000000000000004550000039d00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1920
+  X: 141
+  Y: 86
+  Zed:
+    collapsed: false
