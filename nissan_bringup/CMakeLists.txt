@@ -143,6 +143,9 @@ include_directories(
 add_executable(current_pose_from_tf src/current_pose_from_tf.cpp)
 target_link_libraries(current_pose_from_tf ${catkin_LIBRARIES})
 
+add_executable(path_and_steering src/path_and_steering.cpp)
+target_link_libraries(path_and_steering ${catkin_LIBRARIES})
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use

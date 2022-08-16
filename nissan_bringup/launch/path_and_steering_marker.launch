@@ -1,0 +1,11 @@
+<!--
+    Path and steering markers for RVIZ
+-->
+<launch>
+    <node pkg="nissan_bringup" type="path_and_steering" name="path_and_steering_mark" output="screen">
+        <param name="pose_topic1" value="/current_pose"/>
+        <param name="pose_topic2" value="/estimated_pose"/>
+        <param name="path_topic1" value="/marker_path_current"/>
+        <param name="path_topic2" value="/marker_path_estimated"/>
+    </node>
+</launch>
