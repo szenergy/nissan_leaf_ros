@@ -7,5 +7,6 @@
         <param name="pose_topic2" value="/estimated_pose"/>
         <param name="path_topic1" value="/marker_path_current"/>
         <param name="path_topic2" value="/marker_path_estimated"/>
+        <param name="path_size" value="500"/>
     </node>
 </launch>

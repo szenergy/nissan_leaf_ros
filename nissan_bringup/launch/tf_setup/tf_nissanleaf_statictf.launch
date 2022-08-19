@@ -20,6 +20,7 @@
   <node args="0.0 0.0 0.0 0.0 0.0 0.0 /right_os1/os1_sensor /right_os1/os1_lidar 50" name="os1sensorlidarright" pkg="tf" type="static_transform_publisher"/>
   <node args="0.0 0.0 0.0 0.0 0.0 0.0 /right_os1/os1_sensor /right_os1/os1_imu 50" name="os1sensorimuright" pkg="tf" type="static_transform_publisher"/>
   <include file="$(find nissan_bringup)/launch/3d_nissan.launch" />
+  <include file="$(find nissan_bringup)/launch/path_and_steering_marker.launch" />
   <!-- TODO: test whether this can be removed
   <arg name="model_path" default="$(find nissan_bringup)/param/nissan_leaf_robotdescription.ref.xml" />
   <include file="$(find vehicle_description)/launch/vehicle_model.launch" />

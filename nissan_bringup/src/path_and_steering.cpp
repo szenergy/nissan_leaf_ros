@@ -68,6 +68,7 @@ void loop(){
     pose.header.stamp = ros::Time::now();
     pose.header.frame_id = "map";
     pose.pose.position = actual_pose1.pose.position; 
+    pose.pose.orientation = actual_pose1.pose.orientation; 
     path1.poses.push_back(pose);
     path1.header.frame_id = "map";
     path1.header.stamp = ros::Time::now();
