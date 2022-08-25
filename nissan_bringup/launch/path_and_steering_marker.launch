@@ -2,11 +2,25 @@
     Path and steering markers for RVIZ
 -->
 <launch>
-    <node pkg="nissan_bringup" type="path_and_steering" name="path_and_steering_mark" output="screen">
-        <param name="pose_topic1" value="/current_pose"/>
-        <param name="pose_topic2" value="/estimated_pose"/>
+    <node pkg="nissan_bringup" type="path_and_steering" name="path_and_steering_mark1" output="screen">
+        <!--
+        <param name="pose_topic1" value="/gps/duro/current_pose"/>
+        -->
+        <param name="pose_topic1" value="/gps/duro/current_pose"/>
         <param name="path_topic1" value="/marker_path_current"/>
-        <param name="path_topic2" value="/marker_path_estimated"/>
         <param name="path_size" value="500"/>
+        <param name="publish_steer_marker" value="true"/>
+        <param name="hz" value="20"/>
+    </node>
+    <node pkg="nissan_bringup" type="path_and_steering" name="path_and_steering_mark2" output="screen">
+        <!--
+        <param name="pose_topic1" value="/gps/nova/current_pose"/>
+        -->
+        <param name="pose_topic1" value="/estimated_pose"/>
+        <param name="path_topic1" value="/marker_path_estimated"/>
+        <param name="path_size" value="500"/>
+        <param name="publish_steer_marker" value="false"/>
+        <param name="hz" value="20"/>
     </node>
 </launch>
+
