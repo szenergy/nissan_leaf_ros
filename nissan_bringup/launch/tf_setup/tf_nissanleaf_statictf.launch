@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launch>
-  <node args="697237.0 5285644.0 0.0 0.0 0.0 0.0 map /map_gyor_0 50" name="gyor0_tf_publisher" pkg="tf" type="static_transform_publisher"/>
-  <node args="639770.0 5195040.0 0.0 0.0 0.0 0.0 map /map_zala_0 50" name="zala0_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="697237.0 5285644.0 0.0 0.0 0.0 0.0 map map_gyor_0 50" name="gyor0_tf_publisher" pkg="tf" type="static_transform_publisher"/>
+  <node args="639770.0 5195040.0 0.0 0.0 0.0 0.0 map map_zala_0 50" name="zala0_tf_publisher" pkg="tf" type="static_transform_publisher"/>
   <!-- /map_gyor_0 and map_zala_0 fixes, the RVIZ issue: https://github.com/ros-visualization/rviz/issues/502 -->
   <node args="0.0 0.0 0.2 0.0 0.0 0.0 base_link duro_gps 50" name="duro_gps_tf_publisher" pkg="tf" type="static_transform_publisher"/>
   <node args="1.749 0.703 1.166 0.0 0.0 -1.0471975511965976 base_link velodyne_left 50" name="velodyne_left_tf_publisher" pkg="tf" type="static_transform_publisher"/>
