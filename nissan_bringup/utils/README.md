@@ -2,6 +2,12 @@
 
 This directory contains various utils which comes handy when saving rosbag, mounting an HDD etc.
 
+## TLDR
+
+```
+rosrun nissan_bringup rosbag_record_to_1tb_no_zed_only_important.sh zala_test_a_
+```
+
 ## Rosbag exclude
 
 In a complex vehicular ROS system many topics are present, however not all of them are needed in the bag files. The solution for that can be the use of `-x` exclusion when rosbag record.

@@ -1,1 +1,0 @@
-rosbag record /vehicle_status /vehicle_status_coarse /velodyne_left/velodyne_points /velodyne_right/velodyne_points /set_autonomous_mode /gps/fix /gps/current_pose /scan /tf /zed_node/right_raw/image_rect_color /zed_node/left_raw/image_rect_color
