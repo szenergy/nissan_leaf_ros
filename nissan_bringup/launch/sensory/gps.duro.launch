@@ -7,6 +7,8 @@
             <param name="gps_receiver_frame_id" value="duro"/>
             <param name="imu_frame_id" value="duro"/>
             <param name="utm_frame_id" value="map"/>
+            <param name="z_coord_ref_switch" value="exact"/>
+            <param name="z_coord_exact_height" value="1.7"/>
         </node>
     </group>
 </launch>
